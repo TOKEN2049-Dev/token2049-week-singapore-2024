@@ -110,7 +110,7 @@ const Navbar = () => {
 						<div className="header-left">
 							<a href="https://www.asia.token2049.com">
 								<img src="/Token-logo.png" alt="Token2049" class="nav-mobile-img" />
-								<img src="./token2049-sg.svg" width="160px" class="nav-img" />
+								<img src="./token2049-sg.svg" width="150px" class="nav-img" />
 							</a>
 						</div>
 
@@ -172,11 +172,11 @@ const Navbar = () => {
 										EXPERIENCE
 									</a>
 								</li>
-								<li className="nav-item md:-ml-[10px]">
+								{/* <li className="nav-item md:-ml-[10px]">
 									<a href="/" className="nav-link side-event-active-link">
 										SIDE EVENTS
 									</a>
-								</li>
+								</li> */}
 
 								<div className="nav-item exhibt heder_btn">
 									<a href="https://www.asia.token2049.com/partners" className="btn nav-link">
@@ -256,14 +256,14 @@ const Navbar = () => {
 					<a href="https://www.asia.token2049.com/travel" class="submenu-link">
 						TRAVEL
 					</a>
-					<a href="https://www.asia.token2049.com/mobileapp" class="submenu-link">
+					<a href="https://week.token2049.com" class="submenu-link">
+						TOKEN2049 WEEK
+					</a>
+					<a href="https://www.asia.token2049.com/mobile-app" class="submenu-link">
 						MOBILE APP
 					</a>
-					<a href="https://sgaiweek.com" class="submenu-link">
-						SINGAPORE AI WEEK
-					</a>
 					<a href="https://pfp.token2049.com" class="submenu-link pfps">
-						PFPs
+						I&apos;M ATTENDING
 					</a>
 				</div>
 			</div>

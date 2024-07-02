@@ -163,7 +163,7 @@ body {
 	text-align: start;
 	padding-left: 40px;
 }
-/*.t-events .c-hack .card-style:hover{ background:#410bb9}*/
+/*.t-events .c-hack .card-style:hover{ background:#0351E6}*/
 /*.t-events .c-hack .card-style:hover h3 ,.t-events .c-hack .card-style:hover h4{color: #fff}*/
 .t-events .c-hack .card-style h4 span .fa.fa-clock-o {
 	margin-right: 15px;
@@ -325,7 +325,7 @@ div.t-events_in .e-hack .e-divs div#name-div ul li div .chain-img {
 	width: 80%;
 	bottom: 0px;
 	left: 10%;
-	background: #410bb9;
+	background: #0351e6;
 	right: 20%;
 }
 .tue_all_btn {
@@ -541,8 +541,8 @@ header.header ul li a {
 	text-decoration: none;
 	color: initial;
 	font-size: 14px;
-	font-family: "OpenSauceTwoRegular", sans-serif; /* font-weight: 700;*/
-	font-weight: 400;
+	font-family: "OpenSauceTwoSemiBold", sans-serif; /* font-weight: 700;*/
+	font-weight: 600;
 	color: #fff;
 	padding: 2px 0px 0px 0px;
 }
@@ -943,7 +943,7 @@ body div.webui-popover .arrow {
 	margin-bottom: 10px;
 }
 .t-events .c-hack .card-style h4 span {
-	color: #410bb9;
+	color: #0351e6;
 }
 .t-inner .container .slider-header .slider_inner.r-border .events-wrap {
 	border-right-color: #fff;
@@ -983,16 +983,16 @@ body div.webui-popover .arrow {
 	line-height: 18px;
 	font-size: 18px;
 	background: transparent;
-	border: solid 2px #be1e97;
+	border: solid 2px #8247ff;
 	padding: 9px 20px 11px 20px;
 	border-radius: 6px;
-	color: #be1e97;
+	color: #8247ff;
 	text-transform: capitalize;
 	font-weight: 600;
 }
 .t-events .c-hack .card-style:hover h4 a button,
 .t-events .c-hack .card-style:hover h4 a button {
-	background: #be1e97;
+	background: #8247ff;
 	color: #fff;
 }
 .t-events .fillers select.form-control:focus {
@@ -1057,6 +1057,7 @@ body div.webui-popover .arrow {
 .ban-ner .inner-img {
 	height: 820px;
 	max-height: 80vh;
+	min-height: 780px;
 	display: flex;
 	width: 100%;
 	background-image: url("/TOKEN2049-Week-Header.png");
@@ -1078,13 +1079,13 @@ body div.webui-popover .arrow {
 	font-size: 16px;
 	padding: 10px 18px 12px;
 	background: #fff;
-	border: solid 1px #be1e97;
+	border: solid 1px #8247ff;
 	line-height: 20px;
 	border-radius: 4px;
 	font-weight: 500;
 	margin: 0 5px 10px;
 	text-transform: capitalize;
-	color: #be1e97;
+	color: #8247ff;
 	font-family: "OpenSauceSansLight";
 }
 .filter-btb #all-buttons button {
@@ -1092,12 +1093,12 @@ body div.webui-popover .arrow {
 	font-size: 12px;
 	padding: 10px 19px 11px 19px;
 	background: #fff;
-	border: solid 1px #be1e97;
+	border: solid 1px #8247ff;
 	line-height: 20px;
 	border-radius: 4px;
 	font-weight: 500;
 	text-transform: capitalize;
-	color: #be1e97;
+	color: #8247ff;
 	font-family: "OpenSauceTwoSemiBold", sans-serif;
 	margin: 0 10px 15px 0px !important;
 	height: 45px;
@@ -1110,7 +1111,7 @@ body div.webui-popover .arrow {
 }
 .fillers .filter-btb .form-label {
 	font-size: 20px;
-	color: #be1e97;
+	color: #8247ff;
 	display: flex; /*  width: 5%;*/
 	float: left;
 	font-weight: 600;
@@ -1126,7 +1127,7 @@ body div.webui-popover .arrow {
 .filter-btb #payment-buttons button:hover,
 .filter-btb #all-buttons button.active,
 .filter-btb #payment-buttons button.active {
-	background: #be1e97;
+	background: #8247ff;
 	color: #fff;
 }
 .t-events .c-hack .fillers {
@@ -1149,7 +1150,7 @@ body div.webui-popover .arrow {
 	border-left: 0px;
 	min-width: 110px;
 }
-/*.t-events .container .slider-container .slider-header button:first-child {border-left: solid 2px #410bb9;}*/
+/*.t-events .container .slider-container .slider-header button:first-child {border-left: solid 2px #0351E6;}*/
 .t-events .container .slider-container .slider-header a:first-child button {
 	border-left: solid 2px;
 }
@@ -1161,13 +1162,13 @@ body div.webui-popover .arrow {
 /*.t-events .container .slider-container .slider-header button.but-4 ,*/
 .t-events .container .slider-container .slider-header button:hover {
 	background: #fff;
-	color: #410bb9;
+	color: #0351e6;
 	font-weight: 400;
 	font-family: "OpenSauceTwoLight", sans-serif;
 }
 .t-events .container .slider-container .slider-header button.active {
 	background: #fff;
-	color: #410bb9;
+	color: #0351e6;
 	font-weight: bold;
 	font-family: "OpenSauceTwoLight", sans-serif;
 }
@@ -1185,7 +1186,7 @@ body div.webui-popover .arrow {
 }
 .header-left img {
 	max-width: 100%;
-	object-fit: cover;
+	/* object-fit: cover; */
 }
 header.header .main .navbar-toggler.collapsed .navbar-toggler-icon .fa.fa-bars,
 header.header .main .navbar-toggler .navbar-toggler-icon .fa.fa-close {
@@ -1212,6 +1213,7 @@ header.header .main .navbar-toggler.collapsed .navbar-toggler-icon .fa.fa-close 
 	align-items: center;
 	float: right;
 	padding: 2px 0px 0px 0px;
+	margin-left: 200px;
 }
 header.header .main .navbar-toggler {
 	display: none;
@@ -1221,8 +1223,8 @@ header.header .main .navbar-toggler {
 .t-events .c-hack .card-style button {
 	line-height: 18px;
 	font-size: 12px;
-	background: #be1e97;
-	border: solid 1px #be1e97;
+	background: #8247ff;
+	border: solid 1px #8247ff;
 	padding: 10px 10px 10px 10px;
 	border-radius: 4px;
 	color: #fff;
@@ -1236,8 +1238,8 @@ header.header .main .navbar-toggler {
 .t-events .c-hack .card-style h4 a button:hover,
 .t-events .c-hack .card-style a button:hover,
 .t-events .c-hack .card-style button:hover {
-	background: #cb4bab;
-	border-color: #cb4bab;
+	background: #5f2fc8;
+	border-color: #5f2fc8;
 	color: #ffffff;
 }
 .t-events .container p.evnt-text {
@@ -1304,7 +1306,7 @@ header.header .main .navbar-toggler .navbar-toggler-icon img {
 	font-weight: 500;
 	font-family: "OpenSauceTwoSemiBold", sans-serif;
 	-webkit-font-smoothing: antialiased;
-	height: 45px;
+	height: 55px;
 	transition: all 0.3s;
 }
 .own-event button:hover {
@@ -1313,7 +1315,7 @@ header.header .main .navbar-toggler .navbar-toggler-icon img {
 }
 .own-evnt-btn {
 	justify-content: center;
-	max-width: 62%;
+	max-width: 54%;
 	margin: 38px auto 0 auto;
 	gap: 20px;
 }
@@ -1335,7 +1337,7 @@ header.header .main .navbar-toggler .navbar-toggler-icon img {
 	line-height: 20px;
 	font-weight: 500;
 	text-transform: capitalize;
-	color: #410bb9;
+	color: #0351e6;
 	font-family: "OpenSauceSansBold" !important;
 	float: left;
 	min-width: 170px;
@@ -1352,7 +1354,7 @@ header.header .main .navbar-toggler .navbar-toggler-icon img {
 	justify-content: flex-start;
 }
 .t-events .container .slider-container .slider-header button.active {
-	color: #410bb9; /*height: auto; padding: 14px 14.8px 15px;*/
+	color: #0351e6; /*height: auto; padding: 14px 14.8px 15px;*/
 	position: relative;
 	margin: 0;
 }
@@ -1407,7 +1409,7 @@ header.header .main .navbar-toggler .navbar-toggler-icon img {
 .alldata .subs img {
 	width: 280px;
 	height: 190px;
-	object-fit: cover;
+	/* object-fit: cover; */
 	object-position: 72% 50%;
 }
 #Tue,
@@ -1662,7 +1664,7 @@ footer.bg .container-lg {
 	div.container-sm,
 	div.container-xl,
 	div.container-xxl {
-		max-width: 1080px;
+		max-width: 1000px;
 	}
 	header .container-lg {
 		padding: 0;
@@ -1675,7 +1677,7 @@ footer.bg .container-lg {
 @media screen and (min-width: 1249px) and (max-width: 1436px) {
 	footer.bg div.container-lg,
 	header .container-lg {
-		max-width: 1080px !important;
+		max-width: 1000px !important;
 		margin: 0 auto;
 		padding: 0;
 	}
@@ -1691,7 +1693,7 @@ footer.bg .container-lg {
 	div.container-sm,
 	div.container-xl,
 	div.container-xxl {
-		max-width: 1080px !important;
+		max-width: 1000px !important;
 		margin: 0 auto;
 	}
 	div.ban-ner .inner-text h1 {
@@ -1809,7 +1811,7 @@ footer.bg .container-lg {
 	div.container-sm,
 	div.container-xl,
 	div.container-xxl {
-		max-width: 1080px !important;
+		max-width: 1000px !important;
 		margin: 0 auto;
 	}
 	div.t-events .fillers .cat,
@@ -4226,7 +4228,7 @@ div.only-dates-show {
 	display: block;
 	width: 46.6%;
 	float: left;
-	color: #410bb9; /*padding: 0 20px*/
+	color: #0351e6; /*padding: 0 20px*/
 	border-right: solid 2px #e2e2e2;
 	display: grid;
 	grid-template-rows: auto;
@@ -4914,6 +4916,8 @@ button.tooltip-button:active {
 	color: #fff;
 	text-decoration: none;
 	margin-bottom: 5px;
+	font-weight: 600;
+	font-size: 14px;
 }
 .submenu-link:hover {
 	color: #3f129e;
@@ -5046,4 +5050,9 @@ button.tooltip-button:active {
 .textWhite:hover {
 	color: #715fe9 !important;
 	transition-duration: 0.2s;
+}
+
+.subscribe-head {
+	font-family: "Lato", sans-serif !important;
+	font-weight: 300;
 }

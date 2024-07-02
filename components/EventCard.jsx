@@ -14,8 +14,8 @@ const EventCard = ({
 	inviteOnly = false,
 }) => {
 	return (
-		<div className={isFeatured ? "p-1 featured-card-content-wrapper rounded-lg flex flex-col bg-[#410BB9]" : ""}>
-			{isFeatured && 
+		<div className={isFeatured ? "p-1 featured-card-content-wrapper rounded-lg flex flex-col bg-[#0351E6]" : ""}>
+			{isFeatured && (
 				<div className="my-2 px-4 flex w-full justify-between items-center">
 					<p className="font-semibold m-0 font-primary text-white uppercase">Featured Event</p>
 					<Tooltip
@@ -23,7 +23,7 @@ const EventCard = ({
 						message={"This is a TOKEN2049 Week featured event. Email us at sponsors@token2049.com to upgrade your side event to featured event."}
 					/>
 				</div>
-			}
+			)}
 			<div className="eventsWrappers workshop-btn free-div">
 				<div className={"col-sm-6 col-6 card-style col-md-2 " + (isFeatured ? "featured-card-content-div" : "")}>
 					<div className="col-md-3 ">
@@ -51,27 +51,25 @@ const EventCard = ({
 							</h4>
 						</div>
 					</div>
-                    {
-						inviteOnly?
+					{inviteOnly ? (
 						<div className="col-md-3 pointer-events-none">
-                            <a href="#">
-                                <button>Invite Only</button>
-                            </a>
-                        </div>
-						:(
-                        (registrationLink && registrationLink.length > 0)?
-                        <div className="col-md-3">
-                            <a target="blank" href={registrationLink}>
-                                <button>Register</button>
-                            </a>
-                        </div>
-                        :
-                        <div className="col-md-3 pointer-events-none">
-                            <a href="#">
-                                <button>Coming Soon</button>
-                            </a>
-                        </div>)
-                    }
+							<a href="#">
+								<button>Invite Only</button>
+							</a>
+						</div>
+					) : registrationLink && registrationLink.length > 0 ? (
+						<div className="col-md-3">
+							<a target="blank" href={registrationLink}>
+								<button>Register</button>
+							</a>
+						</div>
+					) : (
+						<div className="col-md-3 pointer-events-none">
+							<a href="#">
+								<button>Coming Soon</button>
+							</a>
+						</div>
+					)}
 				</div>
 			</div>
 		</div>
