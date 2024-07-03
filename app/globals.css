@@ -540,7 +540,7 @@ font-family: 'OpenSauceSansBold';} */
 header.header ul li a {
 	text-decoration: none;
 	color: initial;
-	font-size: 14px;
+	font-size: 13px;
 	font-family: "OpenSauceTwoSemiBold", sans-serif; /* font-weight: 700;*/
 	font-weight: 600;
 	color: #fff;
@@ -664,8 +664,8 @@ header .t-global {
 	justify-content: center;
 	align-items: center;
 	display: flex;
-	padding-left: 20px;
-	margin-top: 10px;
+	padding-left: 8px;
+	margin-top: 20px;
 }
 
 /*slider*/
@@ -1017,7 +1017,7 @@ body div.webui-popover .arrow {
 	width: 100%;
 }
 .ban-ner .inner-img img {
-	max-width: 100%;
+	max-width: 90%;
 	margin-bottom: 20px;
 }
 /*.ban-ner .inner-text {position: absolute;top: 52%;  left: 50%;transform: translate(-50%, -50%);max-width: 590px;line-height: 30px;}*/
@@ -1028,6 +1028,10 @@ body div.webui-popover .arrow {
 	max-width: 97%;
 	line-height: 30px;
 	margin: 0px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 .ban-ner .inner-text h1 {
 	font-size: 60px;
@@ -1463,6 +1467,12 @@ div#carouselExample {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: -20px !important;
+}
+@media screen and (max-width: 768px) {
+	.menu_dv {
+		margin-top: 0px !important;
+	}
 }
 .heder_btn a.btn.nav-link {
 	background: transparent;
@@ -1470,7 +1480,7 @@ div#carouselExample {
 	color: #fff;
 	border: solid 2px #fff;
 	padding: 10px 22px 9px 20px;
-	font-size: 13px;
+	font-size: 14px;
 	font-family: "OpenSauceTwoSemiBold", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	opacity: 1;
@@ -1509,7 +1519,7 @@ div#carouselExample {
 	color: #fff;
 	border: solid 2px #8247ff;
 	padding: 10px 22px 9px 20px;
-	font-size: 13px;
+	font-size: 14px;
 	font-family: "OpenSauceTwoSemiBold", sans-serif;
 	-webkit-font-smoothing: antialiased;
 	opacity: 1;

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
 	return (
 		<footer className="bg">
@@ -31,9 +33,7 @@ const Footer = () => {
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com" target="blank">
-											Newsletter
-										</a>
+										<Link href="/#newsletter">Newsletter</Link>
 									</li>
 									<li>
 										<a href="mailto:info@token2049.com" target="_self">
@@ -46,7 +46,7 @@ const Footer = () => {
 							<div className="col-sm-6 col-md-6 col-3 footer-ryt foot-cnt-right">
 								<ul>
 									<li>
-										<a href="http://www.asia.token2049.com" target="blank">
+										<a href="https://www.token2049.com" target="blank">
 											TOKEN2049 Global
 										</a>
 									</li>

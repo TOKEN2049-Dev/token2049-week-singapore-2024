@@ -1,6 +1,6 @@
 const NewsLetter = () => {
 	return (
-		<div className="alldata subs_section">
+		<div id="newsletter" className="alldata subs_section">
 			<div className="subs row" style={{ padding: 0, paddingTop: "35px", paddingBottom: "18px", background: "#FAFAFA", minHeight: "none !important" }}>
 				<div className="w-full md:p-0 px-[20px] relative flex-col flex  md:items-center md:justify-center h-full bg-[#FAFAFA]">
 					<p className="leading-tight subscribe-head text-3xl text-center lg:text-[35px] md:mr-10 md:px-0 sm:px-16 px-6">
@@ -13,11 +13,7 @@ const NewsLetter = () => {
 								placeholder="Email Address"
 							></input>
 						</div>
-						<a
-							className=""
-							href="https://superai.us14.list-manage.com/subscribe/post?u=bcae48fc20de0ec8abc1a4d5f&id=82a8dd74fe&f_id=001a9ee0f0"
-							target="_blank"
-						>
+						<a className="" href="https://token2049.us17.list-manage.com/subscribe/post?u=0a78eaa9e8ac8f5ee04b715d3&id=5460c9b150" target="_blank">
 							<button className="h-full bg-[#8247FF] hover:bg-[#5F2FC8] uppercase font-semibold text-white rounded-[5px] py-[10px] px-[32px] sm:w-fit w-full sm:mt-0 mt-[6px]">
 								Get Updates
 							</button>

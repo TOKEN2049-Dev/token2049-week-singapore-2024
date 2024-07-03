@@ -99,7 +99,7 @@ const Navbar = () => {
 		<header className="header navbar-expand-lg" tw="exclude">
 			<div className="t-global">
 				<div className="container-lg">
-					<a href="https://www.asia.token2049.com">
+					<a href="https://www.token2049.com">
 						<span className="arrow">← </span>TOKEN2049 GLOBAL
 					</a>
 				</div>
@@ -157,18 +157,24 @@ const Navbar = () => {
                     <a href="https://www.asia.token2049.com/kucoin-stage">KUCOIN STAGE</a>
                   </div>
               </li> --> */}
-								<li className="nav-item">
+								{/* <li className="nav-item">
 									<a href="https://www.asia.token2049.com/agenda" className="nav-link md:-ml-10">
 										AGENDA
 									</a>
-								</li>
+								</li> */}
 								<li className="nav-item">
 									<a href="https://www.asia.token2049.com/partners" className="nav-link md:-ml-10">
 										PARTNERS
 									</a>
 								</li>
+
+								<li className="nav-item">
+									<a href="https://www.asia.token2049.com/startup-competition" className="nav-link md:-ml-8 whitespace-nowrap">
+										STARTUP COMPETITION
+									</a>
+								</li>
 								<li className="nav-item experience">
-									<a href="#" className="nav-link md:-ml-10">
+									<a href="#" className="nav-link md:ml-14">
 										EXPERIENCE
 									</a>
 								</li>
@@ -213,28 +219,34 @@ const Navbar = () => {
 									</span>
 
 									<span class="nav-item">
+										<a href="https://www.asia.token2049.com/startup-competition" class="nav-link-ham">
+											STARTUP COMPETITION
+										</a>
+									</span>
+
+									<span class="nav-item">
 										<a href="https://www.asia.token2049.com/travel" class="nav-link-ham">
 											TRAVEL
 										</a>
 									</span>
 
-									<span class="nav-item">
+									{/* <span class="nav-item">
 										<a href="https://www.asia.token2049.com/mobile-app" class="nav-link-ham">
 											MOBILE APP
 										</a>
-									</span>
+									</span> */}
 
-									<span class="nav-item">
+									{/* <span class="nav-item">
 										<a href="https://week.token2049.com" class="nav-link-ham">
 											TOKEN2049 WEEK
 										</a>
-									</span>
+									</span> */}
 
-									<span class="nav-item">
+									{/* <span class="nav-item">
 										<a href="https://pfp.token2049.com" class="nav-link-ham">
 											I&apos;M ATTENDING
 										</a>
-									</span>
+									</span> */}
 								</div>
 							</div>
 						) : null}
@@ -259,12 +271,12 @@ const Navbar = () => {
 					<a href="https://week.token2049.com" class="submenu-link">
 						TOKEN2049 WEEK
 					</a>
-					<a href="https://www.asia.token2049.com/mobile-app" class="submenu-link">
+					{/* <a href="https://www.asia.token2049.com/mobile-app" class="submenu-link">
 						MOBILE APP
 					</a>
 					<a href="https://pfp.token2049.com" class="submenu-link pfps">
 						I&apos;M ATTENDING
-					</a>
+					</a> */}
 				</div>
 			</div>
 		</header>

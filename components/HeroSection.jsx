@@ -25,12 +25,12 @@ const HeroSection = () => {
 							</p>
 
 							<div className="own-evnt-btn d-flex">
-								<a className="w-full cursor-pointer" href="https://forms.superai.com/singapore-ai-week-event-submission" target="_blank">
+								<a className="w-full cursor-pointer" href="https://forms.token2049.com/singapore/week" target="_blank">
 									<button className="min-w-[279px] side-evnt cursor-pointer">SUBMIT YOUR EVENT</button>
 								</a>
 								<a
 									className="w-full cursor-pointer"
-									href="https://docs.google.com/spreadsheets/d/15HfYTVsDAixDVG2cgkWamxXIPHL5ATR7NdnKzvnwT18/edit?usp=sharing"
+									href="https://docs.google.com/spreadsheets/d/1bWp6ENyhxaNnnCHvxrMRO8n1IRKq3lu891F7Y4zxfZk/edit?gid=0#gid=0"
 									target="__blank"
 								>
 									<button id="side-events-btn" className="min-w-[279px] hst-own cursor-pointer side-events-btn">
