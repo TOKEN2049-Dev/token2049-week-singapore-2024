@@ -13,7 +13,7 @@ const NewsLetter = () => {
 								placeholder="Email Address"
 							></input>
 						</div>
-						<a className="" href="https://token2049.us17.list-manage.com/subscribe/post?u=0a78eaa9e8ac8f5ee04b715d3&id=5460c9b150" target="_blank">
+						<a className="" href="https://token2049.us17.list-manage.com/subscribe?u=0a78eaa9e8ac8f5ee04b715d3&id=5460c9b150" target="_blank">
 							<button className="h-full bg-[#8247FF] hover:bg-[#5F2FC8] uppercase font-semibold text-white rounded-[5px] py-[10px] px-[32px] sm:w-fit w-full sm:mt-0 mt-[6px]">
 								Get Updates
 							</button>
