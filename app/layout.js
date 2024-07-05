@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
 				<meta name="author" content={metadata.description} />
 				<meta property="og:title" content={metadata.title} />
 				<meta property="og:type" content="website" />
-				<meta property="og:image" content="https://raw.githubusercontent.com/DarwinBlock/singapore-ai-week/main/public/og.png" />
+				<meta property="og:image" content="https://raw.githubusercontent.com/DarwinBlock/token2049-week-singapore-2024/main/public/og.png" />
 				<meta property="og:url" content="https://week.token2049.com" />
 				<meta property="og:site_name" content={metadata.title} />
 				<meta property="og:description" content={metadata.description} />
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
 				<meta name="twitter:url" content="https://week.token2049.com" />
 				<meta name="twitter:title" content={metadata.title} />
 				<meta name="twitter:description" content={metadata.title} />
-				<meta name="twitter:image" content="https://raw.githubusercontent.com/DarwinBlock/singapore-ai-week/main/public/og.png" />
+				<meta name="twitter:image" content="https://raw.githubusercontent.com/DarwinBlock/token2049-week-singapore-2024/main/public/og.png" />
 				<meta name="twitter:tags" content="token2049" />
 
 				<link

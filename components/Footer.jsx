@@ -78,7 +78,7 @@ const Footer = () => {
 					<div className="social_icn">
 						<h4 className="mb-2">Stay connected</h4>
 						<ul>
-							<li className="pt-[0.25rem]">
+							<li className="pt-[0.25rem] hidden sm:block">
 								<a href="https://twitter.com/token2049" target="blank">
 									<svg xmlns="http://www.w3.org/2000/svg" height="22" width="22" viewBox="0 0 512 512">
 										<path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
@@ -86,29 +86,37 @@ const Footer = () => {
 									{/* <i className="text-[22px] mt-1 fa-brands fa-twitter"></i> */}
 								</a>
 							</li>
+							<li className="pt-[0.25rem] block sm:hidden">
+								<a href="https://twitter.com/token2049" target="blank">
+									<svg xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 512 512">
+										<path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z" />
+									</svg>
+									{/* <i className="text-[22px] mt-1 fa-brands fa-twitter"></i> */}
+								</a>
+							</li>
 							<li>
 								<a href="https://www.instagram.com/token2049" target="blank">
-									<i className="text-[22px] mt-1 fa-brands fa-instagram"></i>
+									<i className="text-[28px] sm:text-[22px] mt-1 fa-brands fa-instagram"></i>
 								</a>
 							</li>
 							<li>
 								<a href="https://www.linkedin.com/company/token2049/" target="blank">
-									<i className="text-[22px] mt-1 fa-brands fa-linkedin-in"></i>
+									<i className="text-[28px] sm:text-[22px] mt-1 fa-brands fa-linkedin-in"></i>
 								</a>
 							</li>
 							<li>
 								<a href="https://t.me/token2049official" target="blank">
-									<i className="text-[22px] mt-1 fa-brands fa-telegram"></i>
+									<i className="text-[28px] sm:text-[22px] mt-1 fa-brands fa-telegram"></i>
 								</a>
 							</li>
 							<li>
 								<a href="https://www.youtube.com/c/TOKEN2049" target="blank">
-									<i className="mt-1 text-[22px] fa-brands fa-youtube"></i>
+									<i className="mt-1 text-[28px] sm:text-[22px] fa-brands fa-youtube"></i>
 								</a>
 							</li>
 							<li>
 								<a href="https://www.flickr.com/photos/token2049/" target="blank">
-									<i className="text-[22px] mt-1 fa-brands fa-flickr"></i>
+									<i className="text-[28px] sm:text-[22px] mt-1 fa-brands fa-flickr"></i>
 								</a>
 							</li>
 							{/* <li className="pt-[0.125rem]">
