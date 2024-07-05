@@ -1,35 +1,35 @@
 const NewsLetter = () => {
 	return (
 		<div id="newsletter" className="alldata subs_section">
-			<div className="subs row" style={{ padding: 0, paddingTop: "35px", paddingBottom: "18px", background: "#FAFAFA", minHeight: "none !important" }}>
+			<div className="subs row" style={{ padding: 0, paddingTop: "60px", paddingBottom: "70px", background: "#FAFAFA", minHeight: "none !important" }}>
 				<div className="w-full md:p-0 px-[20px] relative flex-col flex  md:items-center md:justify-center h-full bg-[#FAFAFA]">
-					<p className="leading-tight subscribe-head text-3xl text-center lg:text-[35px] md:mr-10 md:px-0 sm:px-16 px-6">
+					<p className="leading-tight subscribe-head text-3xl md:text-4xl text-center lg:text-[35px] md:mr-10 md:px-0 sm:px-16 px-6">
 						Subscribe for the latest event updates
 					</p>
-					<form
-						className="relative sm:flex sm:flex-row flex-col justify-between gap-1 items-start md:px-0 sm:px-16 px-6 rounded-[18px]"
-						action="https://token2049.us17.list-manage.com/subscribe/post"
-						method="POST"
-					>
+					<form action="https://token2049.us17.list-manage.com/subscribe/post" method="POST">
 						<input type="hidden" name="u" value="0a78eaa9e8ac8f5ee04b715d3" />
 						<input type="hidden" name="id" value="5460c9b150" />
-						<div className="border-b-2 border-gray-700">
-							<input
-								className="bg-white rounded-[2px] font-lassrietL px-2 md:max-w-none max-w-md w-full md:w-[250px] outline-none pt-[11px] pb-[6px] border-0 font-light text-gray-500"
-								placeholder="Email Address"
-								name="MERGE0"
-								id="MERGE0"
-								type="email"
-							></input>
-						</div>
 
-						<button
-							type="submit"
-							className="h-full bg-[#8247FF] hover:bg-[#5F2FC8] uppercase font-semibold text-white rounded-[5px] py-[10px] px-[32px] sm:w-fit w-full sm:mt-0 mt-[6px]"
-						>
-							Get Updates
-						</button>
+						<div className="form-div self-center">
+							<div className="border-b-2 border-gray-700 self-center">
+								<input
+									className="form-div-inp bg-white rounded-[2px] font-lassrietL px-2 outline-none pt-[11px] pb-[6px] border-0 font-light text-gray-500"
+									placeholder="Email Address"
+									name="MERGE0"
+									id="MERGE0"
+									type="email"
+								></input>
+							</div>
+
+							<button
+								type="submit"
+								className="form-div-btn self-center h-full bg-[#8247FF] hover:bg-[#5F2FC8] uppercase font-semibold text-white rounded-[5px] py-[10px] px-[32px] sm:w-fit w-fit"
+							>
+								Get Updates
+							</button>
+						</div>
 					</form>
+
 					{/* <div className="relative md:block flex flex-col md:px-0 sm:px-16 px-6 md:shadow-sm rounded-[18px]">
 						<input
 							className="bg-white border-none rounded-[18px] font-lassrietL px-3 md:max-w-none max-w-md md:w-[440px] outline-none py-[18px] shadow-sm md:shadow-none"

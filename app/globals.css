@@ -5115,3 +5115,46 @@ button.tooltip-button:active {
 	font-family: "Lato", sans-serif !important;
 	font-weight: 300;
 }
+
+.form-div {
+	position: relative;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: start !important;
+	gap: 0.25rem; /* equivalent to gap-1 */
+	align-items: flex-start !important;
+	padding-left: 1.5rem; /* equivalent to px-6 */
+	padding-right: 1.5rem; /* equivalent to px-6 */
+	border-radius: 18px;
+}
+
+@media (min-width: 640px) {
+	.form-div {
+		flex-direction: row;
+		padding-left: 4rem; /* equivalent to sm:px-16 */
+		padding-right: 4rem; /* equivalent to sm:px-16 */
+	}
+}
+
+@media (max-width: 640px) {
+	.form-div {
+		flex-direction: column !important;
+	}
+
+	.form-div-btn {
+		margin-top: 6px;
+		width: 100%;
+		max-width: 320px !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.form-div {
+		padding-left: 0; /* equivalent to md:px-0 */
+		padding-right: 0; /* equivalent to md:px-0 */
+	}
+}
+
+.form-div-inp {
+	width: 320px !important;
+}
