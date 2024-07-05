@@ -236,11 +236,11 @@ const Navbar = () => {
 										</a>
 									</span> */}
 
-									{/* <span class="nav-item">
+									<span class="nav-item">
 										<a href="https://week.token2049.com" class="nav-link-ham">
 											TOKEN2049 WEEK
 										</a>
-									</span> */}
+									</span>
 
 									{/* <span class="nav-item">
 										<a href="https://pfp.token2049.com" class="nav-link-ham">
