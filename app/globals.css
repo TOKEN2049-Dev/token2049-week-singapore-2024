@@ -1469,11 +1469,7 @@ div#carouselExample {
 	align-items: center;
 	margin-top: -20px !important;
 }
-@media screen and (max-width: 768px) {
-	.menu_dv {
-		margin-top: 0px !important;
-	}
-}
+
 .heder_btn a.btn.nav-link {
 	background: transparent;
 	border-radius: 8px !important;
@@ -1788,7 +1784,7 @@ footer.bg .container-lg {
 	}
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1199px) {
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
 	/*div.t-events .c-hack .card-style .a-style .evnt-img{height: 170px; width: 170px;}*/
 	/*div.t-events .c-hack .e-divs{grid-template-columns: 20% 20% 20% 20% 20%;}*/
 
@@ -2069,22 +2065,19 @@ footer.bg .container-lg {
 	div.t-events .container h2#others-count {
 		font-size: 30px;
 	}
-	header.header div.main .header-right {
-		width: 72%;
-		display: flex !important;
-	}
+
 	header.header .header-right ul li a {
 		font-size: 12px;
 	}
 	header.header .header-right ul li a.btn {
 		font-size: 10px !important;
 	}
-	header .header-left {
+	/* header .header-left {
 		width: 28%;
 		width: 280px;
 		margin: 0px;
 		padding-left: 10px;
-	}
+	} */
 	div.own-event p,
 	div.own-event button,
 	div.t-events .container p.evnt-text {
@@ -2222,9 +2215,126 @@ header.header .main .navbar-toggler {
 	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 1025px) {
+	.menu_dv {
+		width: 100% !important;
+		justify-content: space-between !important;
+		position: relative !important;
+		margin-top: -10px !important;
+	}
+
+	.header-left {
+		float: left;
+		width: 90%;
+		margin-left: 12px;
+		padding-left: 0;
+		margin-top: 6px;
+		/* margin added */
+	}
+
+	header.header .main a img {
+		width: 40%;
+		padding-left: 12px;
+		max-width: initial !important;
+	}
+
+	header.header .main a img {
+		width: 230px;
+		height: auto !important;
+	}
+
+	header.header .main .navbar-toggler.collapsed .navbar-toggler-icon img.burger-button {
+		height: auto;
+		width: 40px;
+		max-height: none;
+	}
+
+	header.header div.main .header-right {
+		width: 72%;
+		display: none !important;
+	}
+
+	header.header .header-right ul li.age-nda span:before {
+		display: block !important;
+	}
+	header.header .header-right ul li.age-nda a {
+		padding-left: 0px;
+		position: relative;
+		width: fit-content;
+		margin: 0 auto;
+	}
+	header.header .header-right ul li.age-nda.dropdown div.dropdown-content {
+		/*display: block!important;*/
+		background: transparent;
+		position: relative;
+		top: 0;
+		right: unset;
+		float: left;
+		width: 100%;
+		text-align: center;
+		padding-top: 0;
+	}
+	header.header div.header-right ul li.age-nda.dropdown {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	header.header .header-right ul li.age-nda.dropdown .dropdown-content a:before {
+		display: none !important;
+	}
+	header.header .header-right ul li.age-nda.dropdown div.dropdown-content a {
+		padding: 10px 20px;
+	}
+	header.header .header-right ul li.age-nda.dropdown .dropdown-content.show {
+		display: block !important;
+	}
+	li.onlymb {
+		display: block;
+	}
+	header.header .header-right ul li.age-nda.dropdown:hover div.dropdown-content,
+	header.header .header-right ul li.age-nda.dropdown div.dropdown-content.hide {
+		display: none;
+	}
+
+	header.header .main .navbar-toggler.collapsed {
+		position: relative;
+		right: 5%;
+		float: right;
+		z-index: 9;
+		position: absolute;
+		top: 0;
+	}
+
+	header.header .main .navbar-toggler.collapsed .navbar-toggler-icon img.close-burger-btn {
+		height: auto;
+		width: 38px;
+		max-height: none;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.menu_dv {
+		margin-top: 0px !important;
+	}
+}
+
+@media screen and (min-width: 1025px) {
 	header.header .main .header-right.collapse:not(.show) {
 		display: block;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	header.header .main .navbar-toggler {
+		display: block !important;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.heder_btn {
+		justify-content: center;
+		padding: 10px 20px;
+		display: none;
 	}
 }
 
@@ -2244,11 +2354,7 @@ header.header .main .navbar-toggler {
 		height: /*100px*/ 80px;
 		z-index: 999;
 	}
-	.heder_btn {
-		justify-content: center;
-		padding: 10px 20px;
-		display: none;
-	}
+
 	.header-fix-bg {
 		height: /*100px*/ 80px;
 		position: relative;
@@ -2320,14 +2426,6 @@ header.header .main .navbar-toggler {
 		display: block;
 		float: left;
 	}
-	header.header .main .navbar-toggler.collapsed {
-		position: relative;
-		right: 5%;
-		float: right;
-		z-index: 9;
-		position: absolute;
-		top: 0;
-	}
 	header.header .main .navbar-toggler {
 		position: relative;
 		right: 4.4%;
@@ -2353,9 +2451,6 @@ header.header .main .navbar-toggler {
 	}
 	.navbar-toggler:focus {
 		box-shadow: none !important;
-	}
-	header.header .main .navbar-toggler {
-		display: block !important;
 	}
 	div.ban-ner .inner-img {
 		height: 65vh;
@@ -2386,19 +2481,7 @@ header.header .main .navbar-toggler {
 	div.t-events .container .slider-container .slider-header {
 		height: auto;
 	}
-	.header-left {
-		float: left;
-		width: 90%;
-		margin-left: 12px;
-		padding-left: 0;
-		margin-top: 6px;
-		/* margin added */
-	}
-	header.header .main a img {
-		width: 40%;
-		padding-left: 12px;
-		max-width: initial !important;
-	}
+
 	header .t-global {
 		/* height: 24.4px; */
 		justify-content: center;
@@ -2552,10 +2635,6 @@ header.header .main .navbar-toggler {
 		display: block;
 		height: 55px;
 	}
-	.menu_dv {
-		justify-content: space-between;
-		position: relative;
-	}
 	.footer_inner_bg .footer_ul {
 		width: 100%;
 	}
@@ -2605,47 +2684,6 @@ header.header .main .navbar-toggler {
 		display: grid;
 	}
 
-	header.header .header-right ul li.age-nda span:before {
-		display: block !important;
-	}
-	header.header .header-right ul li.age-nda a {
-		padding-left: 0px;
-		position: relative;
-		width: fit-content;
-		margin: 0 auto;
-	}
-	header.header .header-right ul li.age-nda.dropdown div.dropdown-content {
-		/*display: block!important;*/
-		background: transparent;
-		position: relative;
-		top: 0;
-		right: unset;
-		float: left;
-		width: 100%;
-		text-align: center;
-		padding-top: 0;
-	}
-	header.header div.header-right ul li.age-nda.dropdown {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-	header.header .header-right ul li.age-nda.dropdown .dropdown-content a:before {
-		display: none !important;
-	}
-	header.header .header-right ul li.age-nda.dropdown div.dropdown-content a {
-		padding: 10px 20px;
-	}
-	header.header .header-right ul li.age-nda.dropdown .dropdown-content.show {
-		display: block !important;
-	}
-	li.onlymb {
-		display: block;
-	}
-	header.header .header-right ul li.age-nda.dropdown:hover div.dropdown-content,
-	header.header .header-right ul li.age-nda.dropdown div.dropdown-content.hide {
-		display: none;
-	}
 	div.agenda_new {
 		width: 300px;
 	}
@@ -3736,7 +3774,7 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 	display: none;
 }
 
-@media screen and (max-width: 440px) {
+@media screen and (max-width: 1025px) {
 	div.t-events .first-div .main-heading {
 		margin: 30px 0 0 0;
 		font-size: 25px;
@@ -4214,7 +4252,7 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 	}
 }
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 1025px) {
 	.nav-mobile-img {
 		display: none;
 	}
@@ -4847,23 +4885,6 @@ button.tooltip-button:active {
 
 	div.main {
 		padding-top: 14px;
-	}
-
-	header.header .main a img {
-		width: 230px;
-		height: auto !important;
-	}
-
-	header.header .main .navbar-toggler.collapsed .navbar-toggler-icon img.burger-button {
-		height: auto;
-		width: 40px;
-		max-height: none;
-	}
-
-	header.header .main .navbar-toggler.collapsed .navbar-toggler-icon img.close-burger-btn {
-		height: auto;
-		width: 38px;
-		max-height: none;
 	}
 }
 

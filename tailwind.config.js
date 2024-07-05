@@ -1,16 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
-  theme: {
+	content: ["./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./app/**/*.{js,ts,jsx,tsx,mdx}"],
+	theme: {
 		// screens: {
 		// 	xs: "500px",
 		// 	smd: "760px",
 		// 	...defaultTheme.screens,
 		// },
+		screens: {
+			lgCustom: "1025px",
+		},
 		extend: {
 			animation: {
 				text: "text 5s ease infinite",
@@ -152,5 +151,5 @@ module.exports = {
 			},
 		},
 	},
-  plugins: [require('@tailwindcss/forms')],
-}
+	plugins: [require("@tailwindcss/forms")],
+};

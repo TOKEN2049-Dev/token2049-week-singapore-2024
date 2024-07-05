@@ -9,14 +9,14 @@ const Navbar = () => {
 	const [collapsed, setCollapsed] = useState(pathname === "/admin");
 
 	useEffect(() => {
-		setCollapsed(window.innerWidth < 769 || pathname === "/admin");
+		setCollapsed(window.innerWidth < 1026 || pathname === "/admin");
 		window?.addEventListener("resize", (e) => {
 			if (pathname === "/admin") {
 				setCollapsed(true);
 				return;
 			}
 			const windowWidth = window?.innerWidth;
-			if (windowWidth < 769) setCollapsed(true);
+			if (windowWidth < 1026) setCollapsed(true);
 			else setCollapsed(false);
 		});
 	}, [pathname]);
@@ -135,7 +135,7 @@ const Navbar = () => {
 							</span>
 						</button>
 
-						<div className={"header-right navbar-collapse md:block hidden " + (collapsed ? "collapse" : "")} id="navbarSupportedContent">
+						<div className={"header-right navbar-collapse lgCustom:block hidden " + (collapsed ? "collapse" : "")} id="navbarSupportedContent">
 							<ul className="navbar-nav">
 								{/* <li className="nav-item onlymb">
 									<a href="https://www.asia.token2049.com/tickets" className="nav-link">
@@ -195,10 +195,10 @@ const Navbar = () => {
 							</ul>
 						</div>
 
-						{!collapsed && <div id="hamburger-background" className="md:hidden block"></div>}
+						{!collapsed && <div id="hamburger-background" className="lgCustom:hidden block"></div>}
 
 						{!collapsed ? (
-							<div id="hamburger-overlay" className="md:hidden block">
+							<div id="hamburger-overlay" className="lgCustom:hidden block">
 								<div class="navbar-navs">
 									<span class="nav-item">
 										<a href="https://www.asia.token2049.com/tickets" class="nav-link-ham">
