@@ -1,6 +1,7 @@
 import "./globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import GoogleAnalytics from "./GoogleAnalytics";
+import Script from "next/script";
 
 export const metadata = {
 	title: "TOKEN2049 Week | 16-22 September 2024 | Singapore",
@@ -39,6 +40,8 @@ export default function RootLayout({ children }) {
 					referrerPolicy="no-referrer"
 				/>
 				<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+
+				<Script strategy="afterInteractive" src="https://next.brella.io/scripts/custom-page" />
 
 				<GoogleAnalytics />
 			</head>
