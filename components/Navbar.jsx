@@ -169,7 +169,7 @@ const Navbar = () => {
 								</li>
 
 								<li className="nav-item">
-									<a href="https://www.asia.token2049.com/startup-competition" className="nav-link md:-ml-8 whitespace-nowrap">
+									<a href="https://www.asia.token2049.com/nexus-startup-competition" className="nav-link md:-ml-8 whitespace-nowrap">
 										STARTUP COMPETITION
 									</a>
 								</li>
@@ -219,7 +219,7 @@ const Navbar = () => {
 									</span>
 
 									<span class="nav-item">
-										<a href="https://www.asia.token2049.com/startup-competition" class="nav-link-ham">
+										<a href="https://www.asia.token2049.com/nexus-startup-competition" class="nav-link-ham">
 											STARTUP COMPETITION
 										</a>
 									</span>
