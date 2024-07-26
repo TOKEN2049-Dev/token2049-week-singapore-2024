@@ -238,7 +238,7 @@ const Navbar = () => {
 
 									<span class="nav-item">
 										<a href="https://week.token2049.com" class="nav-link-ham">
-											TOKEN2049 WEEK
+											SIDE EVENTS
 										</a>
 									</span>
 
@@ -272,7 +272,7 @@ const Navbar = () => {
 						MOBILE APP
 					</a>
 					<a href="https://week.token2049.com" class="submenu-link">
-						TOKEN2049 WEEK
+						SIDE EVENTS
 					</a>
 
 					{/* <a href="https://pfp.token2049.com" class="submenu-link pfps">
