@@ -242,6 +242,12 @@ const Navbar = () => {
 										</a>
 									</span>
 
+									<span class="nav-item">
+										<a href="https://www.asia.token2049.com/students" class="nav-link-ham">
+											STUDENTS
+										</a>
+									</span>
+
 									{/* <span class="nav-item">
 										<a href="https://pfp.token2049.com" class="nav-link-ham">
 											I&apos;M ATTENDING
@@ -274,7 +280,9 @@ const Navbar = () => {
 					<a href="https://week.token2049.com" class="submenu-link">
 						SIDE EVENTS
 					</a>
-
+					<a href="https://www.asia.token2049.com/students" class="submenu-link">
+						STUDENTS
+					</a>
 					{/* <a href="https://pfp.token2049.com" class="submenu-link pfps">
 						I&apos;M ATTENDING
 					</a> */}
