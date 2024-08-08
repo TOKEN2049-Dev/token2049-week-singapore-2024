@@ -3,9 +3,9 @@ import { formToDBMap } from "@/config/constants";
 
 export default async function getEvents(getAllEvents=false, eventId=null){
     try {
-        let query = `SELECT * FROM Events WHERE verified=1 ORDER BY featured_event DESC, event_date ASC`;
+        let query = `SELECT * FROM Events WHERE verified=1 ORDER BY featured_event DESC, event_date ASC, start_time ASC`;
         if(getAllEvents)
-            query = `SELECT * FROM Events`;
+            query = `SELECT * FROM Events WHERE verified=1 ORDER BY featured_event DESC, event_date ASC, start_time ASC`;
         else if(eventId)
             query = `SELECT * FROM Events WHERE event_id=${eventId}`
         const results = await queryDB(query);
