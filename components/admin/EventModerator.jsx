@@ -46,9 +46,8 @@ export default function EventModerator() {
 		if (event.verified === 1) {
 			setToolToUnverify(event);
 			setUnverifyToolModalOpen(true);
-		}
-		else{
-			if(!isDateInInterval(event.event_date)){
+		} else {
+			if (!isDateInInterval(event.event_date)) {
 				alert("This event is out of the scope of TOKEN2049 Week");
 				return;
 			}
@@ -60,11 +59,11 @@ export default function EventModerator() {
 	function isDateInInterval(dateString) {
 		// Parse the input date string
 		const inputDate = new Date(dateString);
-	  
+
 		// Define the start and end dates of the interval
 		const intervalStartDate = new Date(current_date);
 		const intervalEndDate = new Date(last_date);
-	  
+
 		// Check if the input date is within the interval
 		return inputDate >= intervalStartDate && inputDate <= intervalEndDate;
 	}
@@ -125,6 +124,7 @@ export default function EventModerator() {
 				changeVerificationHandler={changeVerificationHandler}
 				events={eventsToMod}
 				headingsArr={["Event", "Organiser", "Image", "Date", "Timings", "Registration Link", "Category", "Ticket type", "Price", "CTA"]}
+				activeTable={activeTable}
 			/>
 			<DeleteToolConfirmModal isOpen={isDeleteToolModalOpen} setOpen={setDeleteToolModalOpen} toolToDelete={toolToDelete} />
 			<VerifyToolConfirmModal isOpen={isVerifyToolModalOpen} setOpen={setVerifyToolModalOpen} toolToVerify={toolToVerify} />
