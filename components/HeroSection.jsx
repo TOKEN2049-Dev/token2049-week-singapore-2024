@@ -14,7 +14,7 @@ const HeroSection = () => {
 							</span>{" "}
 						</p>
 						<div className="own-event">
-							<p className="Drinks">
+							{/* <p className="Drinks">
 								Experience the year&apos;s widest range of meetups, workshops, networking drinks and parties, creating unparalleled networking
 								opportunities.
 							</p>
@@ -22,7 +22,7 @@ const HeroSection = () => {
 							<p className="updts">
 								Watch this space for continuous updates, and join the conversation <br />
 								by using <b>#TOKEN2049Week</b> on Twitter.
-							</p>
+							</p> */}
 
 							<div className="own-evnt-btn d-flex">
 								<a className="w-full cursor-pointer" href="https://forms.token2049.com/singapore/week" target="_blank">
@@ -38,6 +38,16 @@ const HeroSection = () => {
 									</button>
 								</a>
 							</div>
+
+							<p>
+								<span>Want to host a side event and haven&apos;t found a space yet?&nbsp;</span>
+								<div>
+									<a href="https://tally.so/r/w4Lp9B" target="_blank" className="host-link">
+										Click here to get in touch
+									</a>
+									.
+								</div>
+							</p>
 						</div>
 					</div>
 				</div>

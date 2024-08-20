@@ -157,24 +157,24 @@ const Navbar = () => {
                     <a href="https://www.asia.token2049.com/kucoin-stage">KUCOIN STAGE</a>
                   </div>
               </li> --> */}
-								{/* <li className="nav-item">
+								<li className="nav-item">
 									<a href="https://www.asia.token2049.com/agenda" className="nav-link md:-ml-10">
 										AGENDA
 									</a>
-								</li> */}
+								</li>
 								<li className="nav-item">
 									<a href="https://www.asia.token2049.com/partners" className="nav-link md:-ml-10">
 										PARTNERS
 									</a>
 								</li>
 
-								<li className="nav-item">
+								{/* <li className="nav-item">
 									<a href="https://www.asia.token2049.com/nexus-startup-competition" className="nav-link md:-ml-8 whitespace-nowrap">
 										STARTUP COMPETITION
 									</a>
-								</li>
+								</li> */}
 								<li className="nav-item experience">
-									<a href="#" className="nav-link md:ml-14">
+									<a href="#" className="nav-link md:ml-4">
 										EXPERIENCE
 									</a>
 								</li>

@@ -1283,21 +1283,25 @@ header.header .main .navbar-toggler .navbar-toggler-icon img {
 .own-event {
 	float: left;
 	width: 100%;
-	padding: 37px 0 20px;
+	padding: 10px 0 20px;
 }
+
 .ban-ner .inner-text .own-event p {
 	max-width: 100%;
 	margin: 0px auto 30px;
+	margin-top: 30px;
 	text-align: center;
-	font-size: 18px;
-	font-family: "OpenSauceTwoLight";
+	font-size: 15px;
+	font-family: "OpenSauceTwoSemiBold";
 	font-weight: 500;
 	color: #fff;
-	display: block;
+	display: flex;
+	flex-direction: row;
 	line-height: 28px;
 	text-transform: inherit;
 	opacity: 0.9;
 }
+
 .own-event button {
 	line-height: 22px;
 	font-size: 12px;
@@ -3358,6 +3362,8 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 	div.ban-ner .inner-text .own-event p {
 		font-size: 14px !important;
 		margin-bottom: 15px;
+		margin-top: 70px !important;
+		flex-direction: column !important;
 	}
 }
 
@@ -3768,6 +3774,8 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 		font-size: 14px !important;
 		margin-bottom: 17px;
 		max-width: 96%;
+		margin-top: 70px !important;
+		flex-direction: column !important;
 	}
 }
 
@@ -3946,6 +3954,7 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 	.ban-ner .inner-text .own-event p {
 		margin-bottom: 15px !important;
 		max-width: 96%;
+		flex-direction: column !important;
 	}
 	.t-events .container .slider-container .slider-header button.active:after {
 		width: 60%;
@@ -4950,7 +4959,7 @@ button.tooltip-button:active {
 
 .experience {
 	/* position: static; */
-	right: -70px !important;
+	/* right: 70px !important; */
 }
 .experience:hover .submenu {
 	display: flex;
@@ -5157,4 +5166,8 @@ button.tooltip-button:active {
 
 .form-div-inp {
 	width: 320px !important;
+}
+
+.host-link {
+	color: #fff;
 }
