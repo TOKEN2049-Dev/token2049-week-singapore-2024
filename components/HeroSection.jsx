@@ -5,7 +5,7 @@ const HeroSection = () => {
 			<div className="inner-img">
 				<div className="container flex items-center">
 					<div className="inner-text">
-						<img src={"/TOKEN2049-Week-Logo.png"} className="desktop" alt="Banner" />
+						<img src={"/TOKEN2049-Week-Logo.svg"} className="desktop" alt="Banner" />
 						{/* <img src={"/TOKEN2049-Week-Logo-Stacked.png"} className="mobile" /> */}
 						<p className="event-date whitespace-nowrap">
 							16 - 22 SEPTEMBER 2024{" "}
@@ -48,6 +48,10 @@ const HeroSection = () => {
 									.
 								</div>
 							</p>
+
+							<div className="flex justify-center items-center pt-16 chevron-desktop">
+								<img src={"/chevron.svg"} className="" height="30" width="30" />
+							</div>
 						</div>
 					</div>
 				</div>
