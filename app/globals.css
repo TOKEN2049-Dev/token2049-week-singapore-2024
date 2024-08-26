@@ -4998,6 +4998,39 @@ button.tooltip-button:active {
 	color: #3f129e;
 	text-decoration: none;
 }
+.agenda {
+	position: static;
+}
+.agenda:hover .agendaSubmenu {
+	display: flex;
+	gap: 40px;
+	justify-content: center;
+	width: 100vw;
+	margin-top: -30px;
+}
+.agendaSubmenu {
+	z-index: 100;
+	display: none;
+	position: absolute;
+	background-color: #02318866;
+	padding: 12px;
+	padding-top: 15px;
+	top: 120%;
+	left: 0;
+	right: 0;
+	margin-top: -10px !important;
+}
+.agendaSubmenu-link {
+	color: #fff;
+	text-decoration: none;
+	margin-bottom: 5px;
+	font-weight: 600;
+	font-size: 14px;
+}
+.agendaSubmenu-link:hover {
+	color: #3f129e;
+	text-decoration: none;
+}
 
 #hamburger-overlay {
 	position: fixed;

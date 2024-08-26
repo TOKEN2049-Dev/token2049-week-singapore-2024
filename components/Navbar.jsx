@@ -52,13 +52,84 @@ const Navbar = () => {
 	// 		setCollapsed(false);
 	// })
 
+	// useEffect(() => {
+	// 	const experience = document.querySelector(".experience");
+	// 	const submenu = document.querySelector(".submenu");
+
+	// 	let timeoutId2;
+
+	// 	const handleExperienceMouseEnter = () => {
+	// 		submenu.style.display = "flex";
+	// 		submenu.style.gap = "120px";
+	// 		submenu.style.justifyContent = "center";
+	// 		submenu.style.width = "100vw";
+	// 		submenu.style.marginTop = "-30px";
+	// 		clearTimeout(timeoutId2);
+	// 	};
+
+	// 	const handleExperienceMouseLeave = () => {
+	// 		timeoutId2 = setTimeout(() => {
+	// 			submenu.style.display = "none";
+	// 		}, 2000);
+	// 	};
+
+	// 	const handleSubmenuMouseEnter = () => {
+	// 		clearTimeout(timeoutId2);
+	// 	};
+
+	// 	const handleSubmenuMouseLeave = () => {
+	// 		submenu.style.display = "none";
+	// 	};
+
+	// 	experience.addEventListener("mouseenter", handleExperienceMouseEnter);
+	// 	experience.addEventListener("mouseleave", handleExperienceMouseLeave);
+	// 	submenu.addEventListener("mouseenter", handleSubmenuMouseEnter);
+	// 	submenu.addEventListener("mouseleave", handleSubmenuMouseLeave);
+
+	// 	// Cleanup function to remove event listeners when the component is unmounted
+	// 	return () => {
+	// 		experience.removeEventListener("mouseenter", handleExperienceMouseEnter);
+	// 		experience.removeEventListener("mouseleave", handleExperienceMouseLeave);
+	// 		submenu.removeEventListener("mouseenter", handleSubmenuMouseEnter);
+	// 		submenu.removeEventListener("mouseleave", handleSubmenuMouseLeave);
+	// 	};
+	// }, []);
+
 	useEffect(() => {
+		const agenda = document.querySelector(".agenda");
+		const agendaSubmenu = document.querySelector(".agendaSubmenu");
 		const experience = document.querySelector(".experience");
 		const submenu = document.querySelector(".submenu");
 
+		let timeoutId1;
 		let timeoutId2;
 
+		const handleAgendaMouseEnter = () => {
+			submenu.style.display = "none";
+			agendaSubmenu.style.display = "flex";
+			agendaSubmenu.style.gap = "120px";
+			agendaSubmenu.style.justifyContent = "center";
+			agendaSubmenu.style.width = "100vw";
+			agendaSubmenu.style.marginTop = "-30px";
+			clearTimeout(timeoutId1);
+		};
+
+		const handleAgendaMouseLeave = () => {
+			timeoutId1 = setTimeout(() => {
+				agendaSubmenu.style.display = "none";
+			}, 2000);
+		};
+
+		const handleAgendaSubmenuMouseEnter = () => {
+			clearTimeout(timeoutId1);
+		};
+
+		const handleAgendaSubmenuMouseLeave = () => {
+			agendaSubmenu.style.display = "none";
+		};
+
 		const handleExperienceMouseEnter = () => {
+			agendaSubmenu.style.display = "none";
 			submenu.style.display = "flex";
 			submenu.style.gap = "120px";
 			submenu.style.justifyContent = "center";
@@ -81,6 +152,10 @@ const Navbar = () => {
 			submenu.style.display = "none";
 		};
 
+		agenda.addEventListener("mouseenter", handleAgendaMouseEnter);
+		agenda.addEventListener("mouseleave", handleAgendaMouseLeave);
+		agendaSubmenu.addEventListener("mouseenter", handleAgendaSubmenuMouseEnter);
+		agendaSubmenu.addEventListener("mouseleave", handleAgendaSubmenuMouseLeave);
 		experience.addEventListener("mouseenter", handleExperienceMouseEnter);
 		experience.addEventListener("mouseleave", handleExperienceMouseLeave);
 		submenu.addEventListener("mouseenter", handleSubmenuMouseEnter);
@@ -88,6 +163,10 @@ const Navbar = () => {
 
 		// Cleanup function to remove event listeners when the component is unmounted
 		return () => {
+			agenda.removeEventListener("mouseenter", handleAgendaMouseEnter);
+			agenda.removeEventListener("mouseleave", handleAgendaMouseLeave);
+			agendaSubmenu.removeEventListener("mouseenter", handleAgendaSubmenuMouseEnter);
+			agendaSubmenu.removeEventListener("mouseleave", handleAgendaSubmenuMouseLeave);
 			experience.removeEventListener("mouseenter", handleExperienceMouseEnter);
 			experience.removeEventListener("mouseleave", handleExperienceMouseLeave);
 			submenu.removeEventListener("mouseenter", handleSubmenuMouseEnter);
@@ -157,8 +236,8 @@ const Navbar = () => {
                     <a href="https://www.asia.token2049.com/kucoin-stage">KUCOIN STAGE</a>
                   </div>
               </li> --> */}
-								<li className="nav-item">
-									<a href="https://www.asia.token2049.com/agenda" className="nav-link md:-ml-10">
+								<li className="nav-item agenda">
+									<a href="#" className="nav-link md:-ml-10">
 										AGENDA
 									</a>
 								</li>
@@ -266,6 +345,17 @@ const Navbar = () => {
 							</div>
 						)}
 					</div>
+				</div>
+			</div>
+
+			<div className="p-1 bg-transparent">
+				<div className="agendaSubmenu">
+					<a href="https://www.asia.token2049.com/agenda" class="agendaSubmenu-link">
+						OKX MAIN STAGE
+					</a>
+					<a href="https://www.asia.token2049.com/makerdao-stage" class="agendaSubmenu-link">
+						MAKERDAO STAGE
+					</a>
 				</div>
 			</div>
 
