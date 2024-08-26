@@ -1217,7 +1217,7 @@ header.header .main .navbar-toggler.collapsed .navbar-toggler-icon .fa.fa-close 
 	align-items: center;
 	float: right;
 	padding: 2px 0px 0px 0px;
-	margin-left: 200px;
+	margin-left: 20px;
 }
 header.header .main .navbar-toggler {
 	display: none;
@@ -5065,10 +5065,10 @@ button.tooltip-button:active {
 	flex-direction: column !important;
 	justify-content: start;
 	align-items: start;
-	margin-top: 120px !important;
+	margin-top: 80px !important;
 	font-family: "Larssiet", sans-serif;
 	overflow: scroll;
-	gap: 40px;
+	gap: 24px;
 }
 
 .nav-link-ham {
@@ -5079,7 +5079,6 @@ button.tooltip-button:active {
 	font-size: 26px !important;
 	font-weight: 500;
 	font-family: "Oswald", sans-serif;
-	margin-top: -6px;
 	padding-left: 40px !important;
 }
 

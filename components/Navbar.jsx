@@ -247,16 +247,23 @@ const Navbar = () => {
 									</a>
 								</li>
 
-								{/* <li className="nav-item">
+								<li className="nav-item">
 									<a href="https://www.asia.token2049.com/nexus-startup-competition" className="nav-link md:-ml-8 whitespace-nowrap">
-										STARTUP COMPETITION
+										NEXUS
 									</a>
-								</li> */}
+								</li>
+
 								<li className="nav-item experience">
-									<a href="#" className="nav-link md:ml-4">
+									<a href="#" className="nav-link">
 										EXPERIENCE
 									</a>
 								</li>
+
+								{/* <li className="nav-item experience">
+									<a href="#" className="nav-link md:ml-4">
+										EXPERIENCE
+									</a>
+								</li> */}
 								{/* <li className="nav-item md:-ml-[10px]">
 									<a href="/" className="nav-link side-event-active-link">
 										SIDE EVENTS
@@ -299,7 +306,7 @@ const Navbar = () => {
 
 									<span class="nav-item">
 										<a href="https://www.asia.token2049.com/nexus-startup-competition" class="nav-link-ham">
-											STARTUP COMPETITION
+											NEXUS
 										</a>
 									</span>
 
@@ -324,6 +331,12 @@ const Navbar = () => {
 									<span class="nav-item">
 										<a href="https://www.asia.token2049.com/students" class="nav-link-ham">
 											STUDENTS
+										</a>
+									</span>
+
+									<span class="nav-item">
+										<a href="https://attending.token2049.com" class="nav-link-ham">
+											I&apos;M ATTENDING
 										</a>
 									</span>
 
