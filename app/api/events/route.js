@@ -1,7 +1,11 @@
 import getEvents, { createEvent, changeVerificationStatus, deleteEvent, updateEvent, checkIfClashingFeature } from "@/backend/controllers/eventController";
 import { NextResponse } from "next/server";
+import { middleware } from "@/backend/middleware";
 
 export async function GET(request) {
+	const response = middleware(request);
+	if (response) return response;
+
 	try {
 		const { searchParams } = new URL(request.url);
 		const getAllEvents = searchParams.get("allEvents");
