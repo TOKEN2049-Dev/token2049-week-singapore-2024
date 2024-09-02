@@ -1,22 +1,21 @@
 import getEvents, { createEvent, changeVerificationStatus, deleteEvent, updateEvent, checkIfClashingFeature } from "@/backend/controllers/eventController";
 import { NextResponse } from "next/server";
-import { middleware } from "@/backend/middleware";
+import { setCORSHeaders } from "@/backend/middleware";
 
 export async function GET(request) {
-	const response = middleware(request);
-	if (response) return response;
-
+	let response;
 	try {
 		const { searchParams } = new URL(request.url);
 		const getAllEvents = searchParams.get("allEvents");
 		const eventId = searchParams.get("eventId");
 		const data = await getEvents(getAllEvents, eventId);
-		return NextResponse.json({
-			events: data,
-		});
+		response = NextResponse.json({ events: data });
 	} catch (e) {
-		return NextResponse.json({ message: e }, { status: 500 });
+		response = NextResponse.json({ message: e }, { status: 500 });
 	}
+
+	setCORSHeaders(response);
+	return response;
 }
 
 export async function POST(request) {
