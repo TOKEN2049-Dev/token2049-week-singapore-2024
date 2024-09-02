@@ -1,0 +1,152 @@
+/* src/MapComponent.css */
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+/* Custom Popup Styles */
+.custom-popup .mapboxgl-popup-content {
+  background-color: #ffffff;
+  /* Light background for a modern look */
+  color: #333333;
+  /* Dark text color for readability */
+  border-radius: 16px;
+  /* Increased border-radius for more rounded corners */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  /* Enhanced shadow for more depth */
+  max-width: 350px;
+  /* Maximum width of the popup */
+  border: solid 1px #E2E8F0;
+  /* Subtle border for a polished look */
+  padding: 20px;
+  /* Added padding for better spacing inside the popup */
+}
+
+.custom-popup .mapboxgl-popup-tip {
+  border-bottom-color: #ffffff;
+  /* Same as background */
+}
+
+.popup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Center align text */
+  padding: 10px;
+  /* Padding inside the container */
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  /* Increased gap for better spacing */
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.popup-thumbnail {
+  width: 100px;
+  height: 100px;
+  border-radius: 16px;
+  /* Rounded corners for the image */
+  object-fit: cover;
+  /* Ensure the image covers the area nicely */
+}
+
+.popup-title {
+  flex-grow: 1;
+}
+
+.popup-title h3 {
+  margin: 0;
+  font-size: 16px;
+  /* Slightly larger font size for better readability */
+  font-weight: bold;
+  color: #333333;
+  /* Title color */
+}
+
+.popup-body {
+  margin-bottom: 15px;
+}
+
+.popup-body p {
+  margin: 0;
+  font-size: 14px;
+  color: #666666;
+  /* Lighter text for description */
+}
+
+.popup-footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.popup-button {
+  padding: 10px 20px;
+  width: 100%;
+  background-color: #8247FF;
+  /* Button background color */
+  color: #ffffff;
+  /* Button text color */
+  text-decoration: none;
+  border-radius: 8px;
+  /* Rounded corners for the button */
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.popup-button:hover {
+  background-color: #5f36b3;
+  /* Darken the button on hover */
+}
+
+.popup-button:focus {
+  outline: none;
+}
+
+/* Custom Popup Styles */
+.custom-popup .mapboxgl-popup-close-button {
+  display: none;
+}
+
+/* Mobile Styles */
+@media (max-width: 600px) {
+  .custom-popup .mapboxgl-popup-content {
+    padding: 10px;
+    max-width: 280px;
+    /* Reduce the width for mobile */
+  }
+
+  .custom-popup .mapboxgl-popup-close-button {
+    display: none;
+  }
+
+  .popup-thumbnail {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    /* Smaller radius for mobile */
+  }
+
+  .popup-title h3 {
+    font-size: 14px;
+    /* Smaller font size for mobile */
+  }
+
+  .popup-footer {
+    margin-top: 10px;
+    /* Adjust spacing */
+  }
+
+  .popup-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    /* Smaller font size for the button */
+  }
+}
