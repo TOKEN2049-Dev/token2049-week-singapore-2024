@@ -5211,3 +5211,7 @@ button.tooltip-button:active {
 	color: #fff;
 	text-decoration: underline;
 }
+
+.MuiInputBase-input {
+	background: #f5f7f9;
+}
