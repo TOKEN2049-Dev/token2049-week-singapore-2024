@@ -68,6 +68,7 @@ const HeroToolbar = ({ isMobile, isTablet, handleMouseEnter, handleMouseLeave, i
 							{ label: "MOBILE APP", link: "https://www.asia.token2049.com/mobile-app" },
 							{ label: "SIDE EVENTS", link: "https://week.token2049.com/" },
 							{ label: "STUDENTS", link: "https://www.asia.token2049.com/students" },
+							{ label: "I'M ATTENDING", link: "https://attending.token2049.com" },
 						])
 					}
 				>

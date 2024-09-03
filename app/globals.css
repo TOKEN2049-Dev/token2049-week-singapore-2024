@@ -4970,7 +4970,7 @@ button.tooltip-button:active {
 }
 .experience:hover .submenu {
 	display: flex;
-	gap: 40px;
+	gap: 28px;
 	justify-content: center;
 	width: 100vw;
 	margin-top: -30px;
