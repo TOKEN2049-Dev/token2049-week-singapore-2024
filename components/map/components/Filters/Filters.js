@@ -143,7 +143,8 @@ const FilterBar = ({ onFilterChange, onSearch, ismobile }) => {
 							onKeyDown={handleKeyDown}
 							sx={{
 								fontSize: "14px",
-								padding: "4px",
+								paddingY: "2px",
+								paddingX: "4px",
 								flexGrow: 1,
 							}}
 						/>

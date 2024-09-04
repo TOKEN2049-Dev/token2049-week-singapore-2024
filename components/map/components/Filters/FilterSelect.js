@@ -86,7 +86,7 @@ const FilterSelect = ({ value, onChange, options, type }) => (
 				textTransform: "none",
 			}}
 			MenuProps={MenuProps}
-			IconComponent={FaChevronDown}
+			IconComponent={() => <i className="fa-solid fa-chevron-down pr-2"></i>}
 			displayEmpty
 		>
 			{options.map((option, index) => (
@@ -114,7 +114,7 @@ const FilterSelectMobile = ({ value, onChange, options, type }) => (
 				textTransform: "none",
 			}}
 			MenuProps={MenuProps}
-			IconComponent={FaChevronDown}
+			IconComponent={() => <i className="fa-solid fa-chevron-down pr-1"></i>}
 			displayEmpty
 			renderValue={(selected) => <StyledSelectValue>{options.find((option) => option.value === selected)?.label || ""}</StyledSelectValue>}
 		>
