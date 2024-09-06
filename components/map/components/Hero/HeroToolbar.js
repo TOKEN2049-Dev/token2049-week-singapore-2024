@@ -41,7 +41,9 @@ const HeroToolbar = ({ isMobile, isTablet, handleMouseEnter, handleMouseLeave, i
 					onMouseEnter={() =>
 						handleMouseEnter("Agenda", [
 							{ label: "OKX MAIN STAGE", link: "https://www.asia.token2049.com/agenda" },
-							{ label: "MAKERDAO STAGE", link: "https://www.asia.token2049.com/makerdao-stage" },
+							{ label: "SKY STAGE", link: "https://www.asia.token2049.com/sky-stage" },
+							{ label: "ZEEBU STAGE", link: "https://www.asia.token2049.com/zeebu-stage" },
+							{ label: "DWF LABS STAGE", link: "https://www.asia.token2049.com/dwf-labs-stage" },
 						])
 					}
 				>

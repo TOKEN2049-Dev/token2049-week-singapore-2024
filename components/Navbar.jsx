@@ -366,8 +366,14 @@ const Navbar = () => {
 					<a href="https://www.asia.token2049.com/agenda" class="agendaSubmenu-link">
 						OKX MAIN STAGE
 					</a>
-					<a href="https://www.asia.token2049.com/makerdao-stage" class="agendaSubmenu-link">
-						MAKERDAO STAGE
+					<a href="https://www.asia.token2049.com/sky-stage" class="agendaSubmenu-link">
+						SKY STAGE
+					</a>
+					<a href="https://www.asia.token2049.com/zeebu-stage" class="agendaSubmenu-link">
+						ZEEBU STAGE
+					</a>
+					<a href="https://www.asia.token2049.com/dwf-labs-stage" class="agendaSubmenu-link">
+						DWF LABS STAGE
 					</a>
 				</div>
 			</div>
