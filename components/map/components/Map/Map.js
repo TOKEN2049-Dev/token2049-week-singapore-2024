@@ -202,11 +202,17 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
 				}
 			});
 
-			map.on("moveend", () => {
-				const bounds = map.getBounds();
-				const visibleEvents = events.filter((event) => bounds.contains(event.latlong));
-				onZoomChange(visibleEvents);
-			});
+			// map.on("render", () => {
+			// 	// const bounds = map.LngLatBounds();
+			// 	// console.log("bounds", map.LngLatBounds());
+			// 	// console.log("events", events);
+			// 	// const validEvents = events.filter((event) => {
+			// 	// 	const [lng, lat] = event.latlong;
+			// 	// 	return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
+			// 	// });
+			// 	// const visibleEvents = events.filter((event) => bounds.contains(event.latlong));
+			// 	// onZoomChange(visibleEvents);
+			// });
 
 			map.on("mouseenter", "clusters", () => {
 				map.getCanvas().style.cursor = "pointer";
@@ -221,27 +227,48 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
 	}, [events, onZoomChange, onMarkerClick]);
 
 	useEffect(() => {
+		// Define the render handler outside to keep reference consistent
+		const showPopupAfterMove = () => {
+			updateSelectedEventState(mapRef.current, selectedEvent.event_id);
+			updateSelectedEventColors(mapRef.current, selectedEvent.event_id);
+			showPopup(mapRef.current, selectedEvent);
+
+			// const bounds = mapRef.current.LngLatBounds();
+			// console.log("bounds", mapRef.current.LngLatBounds());
+			// console.log("events", events);
+			// const validEvents = events.filter((event) => {
+			// 	const [lng, lat] = event.latlong;
+			// 	return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
+			// });
+			// const visibleEvents = events.filter((event) => bounds.contains(event.latlong));
+			// onZoomChange(visibleEvents);
+
+			// Detach listener after it's done
+			mapRef.current.off("render", showPopupAfterMove);
+		};
+
+		// Check if selectedEvent exists and map is initialized
 		if (selectedEvent && mapRef.current) {
 			const map = mapRef.current;
 
-			const showPopupAfterMove = () => {
-				updateSelectedEventState(map, selectedEvent.event_id);
-				updateSelectedEventColors(map, selectedEvent.event_id);
-				showPopup(map, selectedEvent);
+			// Add the new render listener
+			map.on("render", showPopupAfterMove);
 
-				map.off("moveend", showPopupAfterMove);
-			};
-
-			map.off("moveend", showPopupAfterMove);
-			map.on("moveend", showPopupAfterMove);
-
+			// Trigger map flyTo
 			map.flyTo({
 				center: isMobile ? [selectedEvent.latlong[0], selectedEvent.latlong[1] - 0.004] : selectedEvent.latlong,
 				zoom: isMobile ? 14 : 17,
 				essential: true,
 			});
 		}
-	}, [selectedEvent]);
+
+		// Optional clean-up to remove listener on component unmount or dependency change
+		return () => {
+			if (mapRef.current) {
+				mapRef.current.off("render", showPopupAfterMove);
+			}
+		};
+	}, [selectedEvent]); // Trigger only when selectedEvent changes
 
 	const updateSelectedEventState = (map, eventId) => {
 		if (selectedEventId.current) {
