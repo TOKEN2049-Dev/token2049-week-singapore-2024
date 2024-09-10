@@ -189,6 +189,15 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
 				onZoomChange(events.filter((event) => event.event_id === id));
 			});
 
+			map.on("moveend", () => {
+				const bounds = map.getBounds();
+				const visibleEvents = events.filter((event) => {
+					const [lng, lat] = event.latlong;
+					return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180 && bounds.contains([lng, lat]);
+				});
+				onZoomChange(visibleEvents);
+			});
+
 			// Handle clicks outside any cluster or point
 			map.on("click", (e) => {
 				const features = map.queryRenderedFeatures(e.point, {
