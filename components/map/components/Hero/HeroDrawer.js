@@ -10,7 +10,7 @@ const links = [
 	{ text: "NEXUS", href: "https://www.asia.token2049.com/nexus-startup-competition" },
 	{ text: "TRAVEL", href: "https://www.asia.token2049.com/travel" },
 	{ text: "MOBILE APP", href: "https://www.asia.token2049.com/mobile-app" },
-	{ text: "SIDE EVENTS", href: "https://week.token2049.com/" },
+	{ text: "TOKEN2049 WEEK", href: "https://week.token2049.com/" },
 	// { text: 'STUDENTS', href: 'https://www.asia.token2049.com/students' },
 	{ text: "I'M ATTENDING", href: "https://www.asia.token2049.com/attending" },
 ];
