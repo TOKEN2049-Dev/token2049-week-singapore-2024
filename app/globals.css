@@ -5215,3 +5215,32 @@ button.tooltip-button:active {
 .MuiInputBase-input {
 	background: #f5f7f9;
 }
+
+.scroll-to-top-button {
+	background-color: #ffffff !important;
+}
+
+.scroll-to-top-button:hover {
+	background-color: #f0f0f0 !important;
+}
+
+.search-input {
+	border: none !important;
+	outline: none !important;
+}
+
+.search-input:hover {
+	border: none !important;
+	outline: none !important;
+}
+
+.search-input:focus {
+	border: none !important;
+	outline: none !important;
+}
+
+[type='text']:focus {
+	border: none !important;
+	outline: none !important;
+	box-shadow: none !important;
+}

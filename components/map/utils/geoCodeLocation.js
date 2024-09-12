@@ -36,6 +36,12 @@ const extractLatLongFromGMapLink = (gmapLink) => {
 				if (latitude == "1.3146092" && longitude == "103.2202227") {
 					return { latitude: "1.371149", longitude: "103.781536" };
 				}
+				if (latitude == "51.4497749" && longitude == "5.4908806") {
+					return { latitude: "1.371149", longitude: "103.781536" };
+				}
+				if (latitude == "37.4960193" && longitude == "127.066239") {
+					return { latitude: "1.371149", longitude: "103.781536" };
+				}
 
 				if (!isNaN(latitude) && !isNaN(longitude)) {
 					return { latitude, longitude };

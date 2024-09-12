@@ -141,11 +141,25 @@ const FilterBar = ({ onFilterChange, onSearch, ismobile }) => {
 							value={searchQuery}
 							onChange={handleSearchChange}
 							onKeyDown={handleKeyDown}
+							className="search-input"
 							sx={{
 								fontSize: "14px",
-								paddingY: "2px",
+								paddingY: "0px",
 								paddingX: "4px",
 								flexGrow: 1,
+								outline: "none",
+								border: "none",
+								boxShadow: "none",
+								"&:focus": {
+									outline: "none",
+									boxShadow: "none",
+									border: "none",
+								},
+								"&:hover": {
+									outline: "none",
+									boxShadow: "none",
+									border: "none",
+								},
 							}}
 						/>
 						<IconButton onClick={hasSearched ? handleClearSearch : handleSearch} sx={{ fontSize: "12px" }}>
@@ -180,10 +194,14 @@ const FilterBar = ({ onFilterChange, onSearch, ismobile }) => {
 						value={searchQuery}
 						onChange={handleSearchChange}
 						onKeyDown={handleKeyDown}
+						className="search-input"
 						sx={{
 							fontSize: "12px",
-							padding: "4px",
+							paddingY: "0px",
+							paddingX: "4px",
 							flexGrow: 1,
+							outline: "none",
+							border: "none",
 						}}
 					/>
 					<IconButton onClick={hasSearched ? handleClearSearch : handleSearch} sx={{ fontSize: "12px" }}>
