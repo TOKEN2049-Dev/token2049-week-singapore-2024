@@ -3,7 +3,9 @@ import { DEFAULT_COORDINATES } from "../const/coordinates";
 const geocodeLocation = async (locationName) => {
 	try {
 		const response = await fetch(
-			`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(locationName)}.json?access_token=${process.env.NEXT_PUBLIC_MAPBOX_API_KEY}`
+			`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(locationName)}.json?access_token=${
+				process.env.NEXT_PUBLIC_MAPBOX_API_KEY
+			}&country=SG`
 		);
 		const data = await response.json();
 
@@ -23,13 +25,17 @@ const extractLatLongFromGMapLink = (gmapLink) => {
 		const url = new URL(gmapLink);
 		const pathSegments = url.pathname.split(",");
 
-		// Check if the URL path contains the '@' sign and valid coordinates
-		if (pathSegments.length > 1 && pathSegments[0].includes("@")) {
-			const latitude = parseFloat(pathSegments[0].split("@")[1]);
-			const longitude = parseFloat(pathSegments[1]);
+		// Check if the URL path contains '@' after a '/'
+		const atIndex = url.pathname.lastIndexOf("@");
+		if (atIndex !== -1 && url.pathname.lastIndexOf("/", atIndex) !== -1) {
+			const coords = url.pathname.slice(atIndex + 1).split(",");
+			if (coords.length >= 2) {
+				const latitude = parseFloat(coords[0]);
+				const longitude = parseFloat(coords[1]);
 
-			if (!isNaN(latitude) && !isNaN(longitude)) {
-				return { latitude, longitude };
+				if (!isNaN(latitude) && !isNaN(longitude)) {
+					return { latitude, longitude };
+				}
 			}
 		}
 	} catch (error) {

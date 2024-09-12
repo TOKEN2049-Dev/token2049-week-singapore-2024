@@ -16,6 +16,12 @@ const App = () => {
 	const [searchQuery, setSearchQuery] = useState("");
 	const isMobile = useMediaQuery("(max-width:980px)");
 
+	// console.log(
+	// 	extractLatLongFromGMapLink(
+	// 		"https://www.google.com/maps/place/SkyPark+Observation+Deck/@1.2852098,103.8584564,829m/data=!3m3!1e3!4b1!5s0x31da190422da0b49:0x571df46076e0c318!4m6!3m5!1s0x27baf2df51fe139:0x82b824e6b7d4033!8m2!3d1.2852044!4d103.8610313!16s%2Fg%2F11c6v4y7rd?entry=ttu&g_ep=EgoyMDI0MDkwMy4wIKXMDSoASAFQAw%3D%3D"
+	// 	)
+	// );
+
 	useEffect(() => {
 		const fetchAndGeocodeEvents = async () => {
 			const storedEvents = JSON.parse(sessionStorage.getItem("eventsWithCoordinates"));
