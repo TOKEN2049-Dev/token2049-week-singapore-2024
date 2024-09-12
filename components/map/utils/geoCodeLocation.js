@@ -33,6 +33,10 @@ const extractLatLongFromGMapLink = (gmapLink) => {
 				const latitude = parseFloat(coords[0]);
 				const longitude = parseFloat(coords[1]);
 
+				if (latitude == "1.3146092" && longitude == "103.2202227") {
+					return { latitude: "1.371149", longitude: "103.781536" };
+				}
+
 				if (!isNaN(latitude) && !isNaN(longitude)) {
 					return { latitude, longitude };
 				}
