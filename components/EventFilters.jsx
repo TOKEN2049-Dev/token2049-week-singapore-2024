@@ -3,17 +3,33 @@ import { useEffect, useMemo, useState } from "react";
 import EventCard from "./EventCard";
 import CategoryFilter from "./CategoryFilters";
 
-const EventFilters = ({ selectedDateFilter }) => {
+const EventFilters = ({ selectedDateFilter, initialEvents }) => {
 	const [selectedCategory, setSelectedCategory] = useState("all");
 	const [paymentFilterData, setPaymentFilterData] = useState(null);
+	const [eventCardData, setEventCardData] = useState(initialEvents);
 
-	const [eventCardData, setEventCardData] = useState(null);
+	// useEffect(() => {
+	// 	const fetchEvents = async () => {
+	// 		const cachedData = localStorage.getItem("cachedEvents");
+	// 		const cachedTimestamp = localStorage.getItem("cachedEventsTimestamp");
 
-	useEffect(() => {
-		axios.get("/api/events").then((res) => {
-			setEventCardData(res.data.events);
-		});
-	}, [selectedDateFilter]);
+	// 		// Check if cache is valid (less than 1 hour old)
+	// 		if (cachedData && cachedTimestamp && Date.now() - parseInt(cachedTimestamp) < 3600000) {
+	// 			setEventCardData(JSON.parse(cachedData));
+	// 		} else {
+	// 			try {
+	// 				const res = await axios.get("/api/events");
+	// 				setEventCardData(res.data.events);
+	// 				localStorage.setItem("cachedEvents", JSON.stringify(res.data.events));
+	// 				localStorage.setItem("cachedEventsTimestamp", Date.now().toString());
+	// 			} catch (error) {
+	// 				console.error("Error fetching events:", error);
+	// 			}
+	// 		}
+	// 	};
+
+	// 	fetchEvents();
+	// }, []);
 
 	const constructedEventCardArr = useMemo(() => {
 		if (eventCardData === null) return [];
