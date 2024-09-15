@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useMemo } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./MapComponent.css";
@@ -6,7 +6,7 @@ import { DEFAULT_COORDINATES } from "../../const/coordinates";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
 
-const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEvent, isMobile }) => {
+const Map = React.memo(({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEvent, isMobile }) => {
 	const mapContainerRef = useRef(null);
 	const mapRef = useRef(null);
 	const activeClusterId = useRef(null);
@@ -189,14 +189,14 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
 				onZoomChange(events.filter((event) => event.event_id === id));
 			});
 
-			map.on("moveend", () => {
-				const bounds = map.getBounds();
-				const visibleEvents = events.filter((event) => {
-					const [lng, lat] = event.latlong;
-					return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180 && bounds.contains([lng, lat]);
-				});
-				onZoomChange(visibleEvents);
-			});
+			// map.on("moveend", () => {
+			// 	const bounds = map.getBounds();
+			// 	const visibleEvents = events.filter((event) => {
+			// 		const [lng, lat] = event.latlong;
+			// 		return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180 && bounds.contains([lng, lat]);
+			// 	});
+			// 	onZoomChange(visibleEvents);
+			// });
 
 			// Handle clicks outside any cluster or point
 			map.on("click", (e) => {
@@ -210,18 +210,6 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
 					onZoomChange(events); // Reset to show all events in the sidebar
 				}
 			});
-
-			// map.on("render", () => {
-			// 	// const bounds = map.LngLatBounds();
-			// 	// console.log("bounds", map.LngLatBounds());
-			// 	// console.log("events", events);
-			// 	// const validEvents = events.filter((event) => {
-			// 	// 	const [lng, lat] = event.latlong;
-			// 	// 	return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
-			// 	// });
-			// 	// const visibleEvents = events.filter((event) => bounds.contains(event.latlong));
-			// 	// onZoomChange(visibleEvents);
-			// });
 
 			map.on("mouseenter", "clusters", () => {
 				map.getCanvas().style.cursor = "pointer";
@@ -241,16 +229,6 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
 			updateSelectedEventState(mapRef.current, selectedEvent.event_id);
 			updateSelectedEventColors(mapRef.current, selectedEvent.event_id);
 			showPopup(mapRef.current, selectedEvent);
-
-			// const bounds = mapRef.current.LngLatBounds();
-			// console.log("bounds", mapRef.current.LngLatBounds());
-			// console.log("events", events);
-			// const validEvents = events.filter((event) => {
-			// 	const [lng, lat] = event.latlong;
-			// 	return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
-			// });
-			// const visibleEvents = events.filter((event) => bounds.contains(event.latlong));
-			// onZoomChange(visibleEvents);
 
 			// Detach listener after it's done
 			mapRef.current.off("render", showPopupAfterMove);
@@ -277,7 +255,7 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
 				mapRef.current.off("render", showPopupAfterMove);
 			}
 		};
-	}, [selectedEvent]); // Trigger only when selectedEvent changes
+	}, [selectedEvent, isMobile]); // Trigger only when selectedEvent or isMobile changes
 
 	const updateSelectedEventState = (map, eventId) => {
 		if (selectedEventId.current) {
@@ -308,7 +286,7 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
           </div>
         </div>
         <div class="popup-footer">
-          <a href="${selectedEvent.registration_link}" target="_blank" rel="noopener noreferrer" class="popup-button">REGISTER</a>
+          <a href="${event.registration_link}" target="_blank" rel="noopener noreferrer" class="popup-button">REGISTER</a>
         </div>
       </div>
     `;
@@ -324,7 +302,12 @@ const Map = ({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEven
 		popupRef.current = popup;
 	};
 
-	return <div ref={mapContainerRef} className="map" />;
-};
+	const memoizedMap = useMemo(() => {
+		return <div ref={mapContainerRef} className="map" />;
+	}, []); // Empty dependency array
+	return memoizedMap;
+});
+
+Map.displayName = "Map";
 
 export default Map;

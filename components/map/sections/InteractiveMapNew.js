@@ -1,4 +1,6 @@
-import React, { useEffect, useState, useCallback, useRef } from "react";
+"use client";
+
+import React, { useState, useCallback, useRef } from "react";
 import { Box, CircularProgress, useMediaQuery } from "@mui/material";
 import Map from "../components/Map/Map";
 import FilterBar from "../components/Filters/Filters";
@@ -6,11 +8,13 @@ import MobileSidebar from "../components/Sidebar/MobileSidebar";
 import DesktopSidebar from "../components/Sidebar/DesktopSidebar";
 import ScrollToTopButton from "../components/Sidebar/ScrollToTop";
 
-const InteractiveMap = ({ events, filters, onFilterChange, onSearch }) => {
-	const [filteredEvents, setFilteredEvents] = useState([]);
-	const [isLoading, setIsLoading] = useState(true); // Loading state for Sidebar
-	const [isLoadingMap, setIsLoadingMap] = useState(false); // Loading state for Map
-	const [selectedEvent, setSelectedEvent] = useState(null); // Selected event for zooming and centering
+const InteractiveMap = ({ initialEvents }) => {
+	const [events, setEvents] = useState(initialEvents);
+	const [filteredEvents, setFilteredEvents] = useState(initialEvents);
+	const [isLoading, setIsLoading] = useState(false);
+	const [isLoadingMap, setIsLoadingMap] = useState(false);
+	const [selectedEvent, setSelectedEvent] = useState(null);
+	const [filters, setFilters] = useState({ tag: "", price: "", searchQuery: "" });
 	const ismobile = useMediaQuery("(max-width:980px)");
 	const sidebarRef = useRef(null);
 
@@ -18,28 +22,12 @@ const InteractiveMap = ({ events, filters, onFilterChange, onSearch }) => {
 		setSelectedEvent(event);
 	}, []);
 
-	useEffect(() => {
-		setIsLoading(true);
-		if (events && events.length > 0) {
-			setIsLoadingMap(true); // Start map loading state
-			setFilteredEvents(events); // Initialize with all events
-
-			setTimeout(() => {
-				setIsLoadingMap(false); // Stop map loading state after 2 seconds
-				setIsLoading(false);
-			}, 1500);
-		} else {
-			setIsLoading(false);
-			setFilteredEvents([]);
-		}
-	}, [events]);
-
 	const handleZoomChange = useCallback((visibleEvents) => {
-		setIsLoading(true); // Start loading state for sidebar
+		setIsLoading(true);
 		setTimeout(() => {
 			setFilteredEvents(visibleEvents);
-			setIsLoading(false); // Stop sidebar loading state after update
-		}, 500); // Simulate loading delay
+			setIsLoading(false);
+		}, 500);
 	}, []);
 
 	const handleMarkerClick = useCallback(
@@ -52,7 +40,6 @@ const InteractiveMap = ({ events, filters, onFilterChange, onSearch }) => {
 				}
 				setIsLoading(false);
 
-				// Scroll sidebar to top and change y position
 				if (sidebarRef.current) {
 					sidebarRef.current.scrollToTop();
 					sidebarRef.current.changePosition(50);
@@ -63,12 +50,41 @@ const InteractiveMap = ({ events, filters, onFilterChange, onSearch }) => {
 	);
 
 	const handleClusterClick = useCallback(() => {
-		// Scroll sidebar to top and change y position
 		if (sidebarRef.current) {
 			sidebarRef.current.scrollToTop();
 			sidebarRef.current.changePosition(50);
 		}
 	}, []);
+
+	const onFilterChange = useCallback((filterType, value) => {
+		setFilters((prevFilters) => ({ ...prevFilters, [filterType]: value }));
+	}, []);
+
+	const onSearch = useCallback((query) => {
+		setFilters((prevFilters) => ({ ...prevFilters, searchQuery: query }));
+	}, []);
+
+	const filterEvents = useCallback(() => {
+		let filtered = events;
+
+		if (filters.tag && filters.tag.toLowerCase() !== "all") {
+			filtered = filtered.filter((event) => event.event_category.toLowerCase() === filters.tag.toLowerCase());
+		}
+
+		if (filters.price && filters.price.toLowerCase() !== "all") {
+			filtered = filtered.filter((event) => event.event_type.toLowerCase() === filters.price.toLowerCase());
+		}
+
+		if (filters.searchQuery) {
+			filtered = filtered.filter((event) => event.event_name.toLowerCase().includes(filters.searchQuery.toLowerCase()));
+		}
+
+		setFilteredEvents(filtered);
+	}, [events, filters]);
+
+	React.useEffect(() => {
+		filterEvents();
+	}, [filterEvents]);
 
 	return !ismobile ? (
 		<Box position="relative">
