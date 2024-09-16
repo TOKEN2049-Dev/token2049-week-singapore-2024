@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import { Box, CircularProgress, useMediaQuery } from "@mui/material";
 import Map from "../components/Map/Map";
 import FilterBar from "../components/Filters/Filters";
@@ -11,6 +11,7 @@ import ScrollToTopButton from "../components/Sidebar/ScrollToTop";
 const InteractiveMap = ({ initialEvents }) => {
 	const [events, setEvents] = useState(initialEvents);
 	const [filteredEvents, setFilteredEvents] = useState(initialEvents);
+	const [allEvents, setAllEvents] = useState(initialEvents);
 	const [isLoading, setIsLoading] = useState(false);
 	const [isLoadingMap, setIsLoadingMap] = useState(false);
 	const [selectedEvent, setSelectedEvent] = useState(null);
@@ -27,7 +28,7 @@ const InteractiveMap = ({ initialEvents }) => {
 		setTimeout(() => {
 			setFilteredEvents(visibleEvents);
 			setIsLoading(false);
-		}, 500);
+		}, 200);
 	}, []);
 
 	const handleMarkerClick = useCallback(
@@ -44,7 +45,7 @@ const InteractiveMap = ({ initialEvents }) => {
 					sidebarRef.current.scrollToTop();
 					sidebarRef.current.changePosition(50);
 				}
-			}, 500);
+			}, 300);
 		},
 		[events]
 	);
@@ -75,11 +76,20 @@ const InteractiveMap = ({ initialEvents }) => {
 			filtered = filtered.filter((event) => event.event_type.toLowerCase() === filters.price.toLowerCase());
 		}
 
+		if (filters.date && filters.date.toLowerCase() !== "all") {
+			filtered = filtered.filter((event) => {
+				const eventDate = new Date(event.event_date);
+				const filterDate = new Date(filters.date);
+				return eventDate.toDateString() === filterDate.toDateString();
+			});
+		}
+
 		if (filters.searchQuery) {
 			filtered = filtered.filter((event) => event.event_name.toLowerCase().includes(filters.searchQuery.toLowerCase()));
 		}
 
 		setFilteredEvents(filtered);
+		setAllEvents(filtered);
 	}, [events, filters]);
 
 	React.useEffect(() => {
@@ -96,12 +106,13 @@ const InteractiveMap = ({ initialEvents }) => {
 				</Box>
 				<Box flexGrow={1} position="relative">
 					<Map
-						events={events}
+						events={allEvents}
 						onZoomChange={handleZoomChange}
 						onMarkerClick={handleMarkerClick}
 						onClusterClick={handleClusterClick}
 						selectedEvent={selectedEvent}
 						isMobile={false}
+						isLoading={isLoading}
 					/>
 					{isLoadingMap && (
 						<Box
@@ -154,12 +165,13 @@ const InteractiveMap = ({ initialEvents }) => {
 			)}
 			<FilterBar onFilterChange={onFilterChange} onSearch={onSearch} ismobile={ismobile} />
 			<Map
-				events={events}
+				events={allEvents}
 				onZoomChange={handleZoomChange}
 				onMarkerClick={handleMarkerClick}
 				onClusterClick={handleClusterClick}
 				selectedEvent={selectedEvent}
 				isMobile={ismobile}
+				isLoading={isLoading}
 			/>
 			<MobileSidebar
 				ref={sidebarRef}

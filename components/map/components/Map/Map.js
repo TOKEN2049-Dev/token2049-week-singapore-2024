@@ -1,17 +1,27 @@
-import React, { useEffect, useRef, useMemo } from "react";
+import React, { useEffect, useRef, useMemo, useCallback } from "react";
 import mapboxgl from "!mapbox-gl"; // eslint-disable-line import/no-webpack-loader-syntax
 import "mapbox-gl/dist/mapbox-gl.css";
 import "./MapComponent.css";
 import { DEFAULT_COORDINATES } from "../../const/coordinates";
+import debounce from "lodash/debounce";
+import { Box, CircularProgress } from "@mui/material";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
 
-const Map = React.memo(({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEvent, isMobile }) => {
+const Map = React.memo(({ events, onZoomChange, onMarkerClick, onClusterClick, selectedEvent, isMobile, isLoading }) => {
 	const mapContainerRef = useRef(null);
 	const mapRef = useRef(null);
 	const activeClusterId = useRef(null);
 	const selectedEventId = useRef(null);
 	const popupRef = useRef(null);
+
+	// Create a debounced version of onZoomChange
+	const debouncedZoomChange = useCallback(
+		debounce((visibleEvents) => {
+			onZoomChange(visibleEvents);
+		}, 2000), // Adjust the delay (in milliseconds) as needed
+		[onZoomChange]
+	);
 
 	useEffect(() => {
 		const map = new mapboxgl.Map({
@@ -189,14 +199,14 @@ const Map = React.memo(({ events, onZoomChange, onMarkerClick, onClusterClick, s
 				onZoomChange(events.filter((event) => event.event_id === id));
 			});
 
-			// map.on("moveend", () => {
-			// 	const bounds = map.getBounds();
-			// 	const visibleEvents = events.filter((event) => {
-			// 		const [lng, lat] = event.latlong;
-			// 		return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180 && bounds.contains([lng, lat]);
-			// 	});
-			// 	onZoomChange(visibleEvents);
-			// });
+			map.on("moveend", () => {
+				const bounds = map.getBounds();
+				const visibleEvents = events.filter((event) => {
+					const [lng, lat] = event.latlong;
+					return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180 && bounds.contains([lng, lat]);
+				});
+				debouncedZoomChange(visibleEvents);
+			});
 
 			// Handle clicks outside any cluster or point
 			map.on("click", (e) => {
@@ -220,8 +230,11 @@ const Map = React.memo(({ events, onZoomChange, onMarkerClick, onClusterClick, s
 			});
 		});
 
-		return () => map.remove();
-	}, [events, onZoomChange, onMarkerClick]);
+		return () => {
+			map.remove();
+			debouncedZoomChange.cancel(); // Cancel any pending debounced calls on cleanup
+		};
+	}, [events, onZoomChange, debouncedZoomChange, onMarkerClick]);
 
 	useEffect(() => {
 		// Define the render handler outside to keep reference consistent
@@ -303,8 +316,28 @@ const Map = React.memo(({ events, onZoomChange, onMarkerClick, onClusterClick, s
 	};
 
 	const memoizedMap = useMemo(() => {
-		return <div ref={mapContainerRef} className="map" />;
-	}, []); // Empty dependency array
+		return (
+			<Box position="relative" height="100%" width="100%">
+				<div ref={mapContainerRef} className="map" />
+				{isLoading && (
+					<Box
+						position="absolute"
+						top={0}
+						left={0}
+						right={0}
+						bottom={0}
+						display="flex"
+						alignItems="center"
+						justifyContent="center"
+						bgcolor="rgba(255, 255, 255, 0.7)"
+						zIndex={1000}
+					>
+						<CircularProgress />
+					</Box>
+				)}
+			</Box>
+		);
+	}, [isLoading]); // Add isLoading to the dependency array
 	return memoizedMap;
 });
 
