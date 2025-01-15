@@ -152,25 +152,34 @@ const Navbar = () => {
 			submenu.style.display = "none";
 		};
 
-		agenda.addEventListener("mouseenter", handleAgendaMouseEnter);
-		agenda.addEventListener("mouseleave", handleAgendaMouseLeave);
-		agendaSubmenu.addEventListener("mouseenter", handleAgendaSubmenuMouseEnter);
-		agendaSubmenu.addEventListener("mouseleave", handleAgendaSubmenuMouseLeave);
-		experience.addEventListener("mouseenter", handleExperienceMouseEnter);
-		experience.addEventListener("mouseleave", handleExperienceMouseLeave);
-		submenu.addEventListener("mouseenter", handleSubmenuMouseEnter);
-		submenu.addEventListener("mouseleave", handleSubmenuMouseLeave);
+		if (agenda) {
+			agenda.addEventListener("mouseenter", handleAgendaMouseEnter);
+			agenda.addEventListener("mouseleave", handleAgendaMouseLeave);
+			agendaSubmenu.addEventListener("mouseenter", handleAgendaSubmenuMouseEnter);
+			agendaSubmenu.addEventListener("mouseleave", handleAgendaSubmenuMouseLeave);
+		}
+
+		if (experience) {
+			experience.addEventListener("mouseenter", handleExperienceMouseEnter);
+			experience.addEventListener("mouseleave", handleExperienceMouseLeave);
+			submenu.addEventListener("mouseenter", handleSubmenuMouseEnter);
+			submenu.addEventListener("mouseleave", handleSubmenuMouseLeave);
+		}
 
 		// Cleanup function to remove event listeners when the component is unmounted
 		return () => {
-			agenda.removeEventListener("mouseenter", handleAgendaMouseEnter);
-			agenda.removeEventListener("mouseleave", handleAgendaMouseLeave);
-			agendaSubmenu.removeEventListener("mouseenter", handleAgendaSubmenuMouseEnter);
-			agendaSubmenu.removeEventListener("mouseleave", handleAgendaSubmenuMouseLeave);
-			experience.removeEventListener("mouseenter", handleExperienceMouseEnter);
-			experience.removeEventListener("mouseleave", handleExperienceMouseLeave);
-			submenu.removeEventListener("mouseenter", handleSubmenuMouseEnter);
-			submenu.removeEventListener("mouseleave", handleSubmenuMouseLeave);
+			if (agenda) {
+				agenda.removeEventListener("mouseenter", handleAgendaMouseEnter);
+				agenda.removeEventListener("mouseleave", handleAgendaMouseLeave);
+				agendaSubmenu.removeEventListener("mouseenter", handleAgendaSubmenuMouseEnter);
+				agendaSubmenu.removeEventListener("mouseleave", handleAgendaSubmenuMouseLeave);
+			}
+			if (experience) {
+				experience.removeEventListener("mouseenter", handleExperienceMouseEnter);
+				experience.removeEventListener("mouseleave", handleExperienceMouseLeave);
+				submenu.removeEventListener("mouseenter", handleSubmenuMouseEnter);
+				submenu.removeEventListener("mouseleave", handleSubmenuMouseLeave);
+			}
 		};
 	}, []);
 
@@ -189,7 +198,8 @@ const Navbar = () => {
 						<div className="header-left">
 							<a href="https://www.asia.token2049.com">
 								<img src="/Token-logo.png" alt="Token2049" class="nav-mobile-img" />
-								<img src="./token2049-sg.svg" width="150px" class="nav-img" />
+								{/*<img src="./token2049-sg.svg" width="150px" class="nav-img" />*/}
+								<img src="./TOKENWEEK-DUBAI-LOGO.svg" width="130px" class="nav-img" />
 							</a>
 						</div>
 
@@ -222,7 +232,7 @@ const Navbar = () => {
 									</a>
 								</li> */}
 								<li className="nav-item">
-									<a href="https://www.asia.token2049.com/speakers" className="nav-link md:-ml-10">
+									<a href="https://www.dubai.token2049.com/speakers" className="nav-link md:-ml-10 hover:text-[#DB90FF]">
 										SPEAKERS
 									</a>
 								</li>
@@ -236,28 +246,42 @@ const Navbar = () => {
                     <a href="https://www.asia.token2049.com/kucoin-stage">KUCOIN STAGE</a>
                   </div>
               </li> --> */}
+			  					{/* 
 								<li className="nav-item agenda">
 									<a href="#" className="nav-link md:-ml-10">
 										AGENDA
 									</a>
 								</li>
+								*/}
 								<li className="nav-item">
-									<a href="https://www.asia.token2049.com/partners" className="nav-link md:-ml-10">
+									<a href="https://www.dubai.token2049.com/travel" className="nav-link md:-ml-10">
+										TRAVEL
+									</a>
+								</li>
+								<li className="nav-item">
+									<a href="https://www.dubai.token2049.com/partners" className="nav-link md:-ml-10">
 										PARTNERS
 									</a>
 								</li>
 
-								<li className="nav-item">
-									<a href="https://www.asia.token2049.com/nexus-startup-competition" className="nav-link md:-ml-8 whitespace-nowrap">
-										NEXUS
+								<li className="nav-item md:min-width-[110px]">
+									<a href="https://www.dubai.token2049.com/students" className="nav-link md:-ml-10">
+										STUDENTS
 									</a>
 								</li>
-
+								<li className="nav-item">
+									<a href="https://www.dubai.token2049.com/2024-report" className="nav-link md:-ml-10">
+										2024 REPORT
+									</a>
+								</li>
+								
+								{/*
 								<li className="nav-item experience">
 									<a href="#" className="nav-link">
 										EXPERIENCE
 									</a>
 								</li>
+								*/}
 
 								{/* <li className="nav-item experience">
 									<a href="#" className="nav-link md:ml-4">
@@ -271,10 +295,10 @@ const Navbar = () => {
 								</li> */}
 
 								<div className="nav-item exhibt heder_btn">
-									<a href="https://www.asia.token2049.com/partners" className="btn nav-link">
+									<a href="https://www.dubai.token2049.com/partners" className="btn nav-link">
 										EXHIBIT
 									</a>
-									<a href="https://www.asia.token2049.com/tickets" className="btn bttn nav-link">
+									<a href="https://www.dubai.token2049.com/tickets" className="btn bttn nav-link">
 										TICKETS
 									</a>
 								</div>
@@ -287,58 +311,50 @@ const Navbar = () => {
 							<div id="hamburger-overlay" className="lgCustom:hidden block">
 								<div class="navbar-navs">
 									<span class="nav-item">
-										<a href="https://www.asia.token2049.com/tickets" class="nav-link-ham">
+										<a href="https://www.dubai.token2049.com/tickets" class="nav-link-ham">
 											TICKETS
 										</a>
 									</span>
 
 									<span class="nav-item">
-										<a href="https://www.asia.token2049.com/speakers" class="nav-link-ham">
+										<a href="https://www.dubai.token2049.com/speakers" class="nav-link-ham">
 											SPEAKERS
 										</a>
 									</span>
 
 									<span class="nav-item">
-										<a href="https://www.asia.token2049.com/partners" class="nav-link-ham">
+										<a href="https://www.dubai.token2049.com/partners" class="nav-link-ham">
 											PARTNERS
 										</a>
 									</span>
 
 									<span class="nav-item">
-										<a href="https://www.asia.token2049.com/nexus-startup-competition" class="nav-link-ham">
-											NEXUS
-										</a>
-									</span>
-
-									<span class="nav-item">
-										<a href="https://www.asia.token2049.com/travel" class="nav-link-ham">
+										<a href="https://www.dubai.token2049.com/travel" class="nav-link-ham">
 											TRAVEL
 										</a>
 									</span>
 
-									<span class="nav-item">
-										<a href="https://www.asia.token2049.com/mobile-app" class="nav-link-ham">
-											MOBILE APP
-										</a>
-									</span>
 
 									<span class="nav-item">
-										<a href="https://week.token2049.com" class="nav-link-ham">
-											TOKEN2049 WEEK
-										</a>
-									</span>
-
-									{/* <span class="nav-item">
-										<a href="https://www.asia.token2049.com/students" class="nav-link-ham">
+										<a href="https://www.dubai.token2049.com/students" class="nav-link-ham">
 											STUDENTS
 										</a>
-									</span> */}
+									</span>
+
+									<span class="nav-item">
+										<a href="https://www.dubai.token2049.com/2024-report" class="nav-link-ham">
+											2024 REPORT
+										</a>
+									</span>
+
+									{/*}
 
 									<span class="nav-item">
 										<a href="https://attending.token2049.com" class="nav-link-ham">
 											I&apos;M ATTENDING
 										</a>
 									</span>
+									*/}
 
 									{/* <span class="nav-item">
 										<a href="https://pfp.token2049.com" class="nav-link-ham">

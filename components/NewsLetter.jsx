@@ -1,7 +1,7 @@
 const NewsLetter = () => {
 	return (
 		<div id="newsletter" className="alldata subs_section">
-			<div className="subs row" style={{ padding: 0, paddingTop: "60px", paddingBottom: "70px", background: "#FAFAFA", minHeight: "none !important" }}>
+			<div className="subs row" style={{ padding: 0, paddingTop: "60px", paddingBottom: "0px", background: "#FAFAFA", minHeight: "none !important" }}>
 				<div className="w-full md:p-0 px-[20px] relative flex-col flex  md:items-center md:justify-center h-full bg-[#FAFAFA]">
 					<p className="leading-tight subscribe-head text-3xl md:text-4xl text-center lg:text-[35px] md:mr-10 md:px-0 sm:px-16 px-6">
 						Subscribe for the latest event updates
