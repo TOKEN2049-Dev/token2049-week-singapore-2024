@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import NewsLetter from "@/components/NewsLetter";
+import { Suspense } from "react";
 
 // Cache the fetch function
 const fetchEvents = cache(async () => {
@@ -34,9 +35,15 @@ export default async function HomePage() {
 			<Navbar />
 			<HeroSection />
 			<div className="t-events">
+				{/* 
 				<div className="container c-hack">
-					<EventsComp initialEvents={events} />
+					
+					<Suspense fallback={<div>Loading...</div>}>
+						<EventsComp initialEvents={events} />
+					</Suspense>
+					
 				</div>
+				*/}
 				<NewsLetter />
 				<Footer />
 			</div>

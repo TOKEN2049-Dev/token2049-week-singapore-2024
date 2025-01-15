@@ -1,3 +1,5 @@
+"use client";
+
 const HeroSection = () => {
 	return (
 		<div className="ban-ner">
@@ -8,9 +10,9 @@ const HeroSection = () => {
 						<img src={"/TOKEN2049-Week-Logo.svg"} className="desktop" alt="Banner" />
 						{/* <img src={"/TOKEN2049-Week-Logo-Stacked.png"} className="mobile" /> */}
 						<p className="event-date whitespace-nowrap">
-							16 - 22 SEPTEMBER 2024{" "}
+							28 April - 4 May 2025{" "}
 							<span className="dxtop flex">
-								<span className="h-full flex justify-center items-center px-3">|</span> SINGAPORE
+								<span className="h-full flex justify-center items-center px-3">•</span> DUBAI
 							</span>{" "}
 						</p>
 						<div className="own-event">
@@ -25,10 +27,11 @@ const HeroSection = () => {
 							</p> */}
 
 							<div className="own-evnt-btn d-flex">
-								<a className="w-full cursor-pointer" href="https://forms.token2049.com/singapore/week" target="_blank">
+								<a className="cursor-pointer" href="https://forms.token2049.com/dubai/token2049-week-event-submission" target="_blank">
 									<button className="min-w-[279px] side-evnt cursor-pointer">SUBMIT YOUR EVENT</button>
 								</a>
-								<a
+								
+								{/* <a
 									className="w-full cursor-pointer"
 									href="https://docs.google.com/spreadsheets/d/1bWp6ENyhxaNnnCHvxrMRO8n1IRKq3lu891F7Y4zxfZk/edit?gid=0#gid=0"
 									target="__blank"
@@ -36,7 +39,7 @@ const HeroSection = () => {
 									<button id="side-events-btn" className="min-w-[279px] hst-own cursor-pointer side-events-btn">
 										SIDE EVENTS SHEET
 									</button>
-								</a>
+								</a> */}
 							</div>
 
 							<p>

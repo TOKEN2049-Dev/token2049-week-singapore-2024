@@ -303,7 +303,7 @@ div.t-events_in .e-hack .e-divs div#name-div ul li div .chain-img {
 	background-position: 122px 0px;
 	min-height: 225px;
 	align-items: flex-start;
-	margin: 100px 0px 0px;
+	margin: 0px 0px 0px;
 	background-size: 385px 222px;
 }
 
@@ -548,7 +548,7 @@ header.header ul li a {
 }
 header.header ul {
 	display: flex;
-	padding: 2px 0px 0 /*70*/ 58px;
+	padding: 2px 0px 0px /*70*/ 10px;
 	justify-content: flex-start;
 	float: left;
 	width: 100%;
@@ -570,7 +570,7 @@ header.header ul {
 		align-items: center;
 		flex-direction: unset; /* gap: 56px;*/
 		display: grid;
-		grid-template-columns: 14.8% 12.9% 14.7% 11.9% 15.9% 30%;
+		grid-template-columns: 14% 14% 14% 14% 14% 30%;
 	}
 }
 header.header a {
@@ -1064,7 +1064,8 @@ body div.webui-popover .arrow {
 	min-height: 780px;
 	display: flex;
 	width: 100%;
-	background-image: url("/TOKEN2049-Week-Header.png");
+	/*background-image: url("/TOKEN2049-Week-Header.png");*/
+	background-image: url("/TOKENWEEK-DUBAI-HEADER.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -1499,8 +1500,8 @@ div#carouselExample {
 	.heder_btn a.btn.nav-link {
 		background: #fff;
 		border-radius: 4px !important;
-		color: #b83df5;
-		border: solid 2px #b83df5;
+		color: #DB90FF;
+		border: solid 2px #DB90FF;
 		padding: 11px 23px 9px 21px;
 		font-size: 12px;
 		font-family: "OpenSauceTwoSemiBold", sans-serif;
@@ -1515,10 +1516,10 @@ div#carouselExample {
 }
 
 .heder_btn a.btn.bttn.nav-link {
-	background: #8247ff;
+	background: #B83DF5;
 	border-radius: 8px !important;
 	color: #fff;
-	border: solid 2px #8247ff;
+	border: solid 2px #B83DF5;
 	padding: 10px 22px 9px 20px;
 	font-size: 14px;
 	font-family: "OpenSauceTwoSemiBold", sans-serif;
@@ -1528,8 +1529,8 @@ div#carouselExample {
 	margin-left: 15px;
 }
 .heder_btn a.btn.bttn.nav-link:hover {
-	background: #5f2fc8;
-	border: solid 2px #5f2fc8;
+	background: #9F0CE9;
+	border: solid 2px #9F0CE9;
 }
 @-moz-document url-prefix() {
 	.heder_btn a.btn.bttn.nav-link {
@@ -1759,7 +1760,7 @@ footer.bg .container-lg {
 		min-width: 70px;
 	}
 	div.alldata .subs.row {
-		margin-top: 75px;
+		margin-top: 0px;
 		background-size: 330px 190px;
 		min-height: 192px;
 		background-position: 5px 0px;
@@ -3386,7 +3387,8 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 
 @media screen and (min-width: 768px) and (max-width: 849px) {
 	header.header ul {
-		grid-template-columns:/* 20% 19% 19% 28% 32%*/ 16.8% 13.9% 17.7% 12.9% 24.9% 36%;
+		/*grid-template-columns: 16.8% 13.9% 17.7% 12.9% 24.9% 36%;*/
+		grid-template-columns: 14% 14% 14% 14% 14% 30%;
 	}
 	header.header .header-right ul li.age-nda.dropdown div.dropdown-content {
 		right: -23px !important;
@@ -3396,7 +3398,8 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 
 @media screen and (min-width: 850px) and (max-width: 1023px) {
 	header.header ul {
-		grid-template-columns: 15.8% 12.9% 16.7% 11.9% 21.9% 32%;
+		/*grid-template-columns: 15.8% 12.9% 16.7% 11.9% 21.9% 32%;*/
+		grid-template-columns: 14% 14% 14% 14% 14% 30%;
 	}
 	header.header .header-right ul li.age-nda.dropdown div.dropdown-content {
 		right: 0px !important;
@@ -4572,32 +4575,33 @@ header.header .header-right ul li.age-nda div.agenda_new1 span::before {
 }
 
 .own-event button.side-evnt {
-	background: #8247ff;
+	background: #B83DF5;
 	color: #fff;
 	font-size: 14px;
-	border: 2px solid #8247ff;
+	border: 2px solid #B83DF5;
 	border-radius: 12px !important;
 	width: 100%;
 }
 .own-event button.side-evnt:hover {
-	background: #5f2fc8;
+	background: #9F0CE9;
 	color: #fff;
-	border-color: #5f2fc8;
+	border-color: #9F0CE9;
 }
 
 .own-event button.hst-own {
-	background: transparent;
+	background: #ffffff10;
+	backdrop-filter: blur(30px);
 	color: #fff;
 	font-size: 14px;
-	border: 2px solid #ffffff;
+	border: 2px solid #ffffff10;
 	border-radius: 12px !important;
 	/* cursor: default; */
 }
 
 .own-event button.hst-own:hover {
-	background: transparent;
-	color: #eae1ff;
-	border-color: #eae1ff;
+	background: #ffffff20;
+	color: #ffffff;
+	border-color: #ffffff10;
 	/* cursor: default; */
 }
 
