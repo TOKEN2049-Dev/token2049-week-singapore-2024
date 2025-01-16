@@ -40,61 +40,6 @@ const Navbar = () => {
 		}
 	};
 
-	// window?.addEventListener('resize', (e) => {
-	// 	if(pathname === "/admin"){
-	// 		setCollapsed(true)
-	// 		return;
-	// 	}
-	// 	const windowWidth = window?.innerWidth;
-	// 	if(windowWidth < 769)
-	// 		setCollapsed(true);
-	// 	else
-	// 		setCollapsed(false);
-	// })
-
-	// useEffect(() => {
-	// 	const experience = document.querySelector(".experience");
-	// 	const submenu = document.querySelector(".submenu");
-
-	// 	let timeoutId2;
-
-	// 	const handleExperienceMouseEnter = () => {
-	// 		submenu.style.display = "flex";
-	// 		submenu.style.gap = "120px";
-	// 		submenu.style.justifyContent = "center";
-	// 		submenu.style.width = "100vw";
-	// 		submenu.style.marginTop = "-30px";
-	// 		clearTimeout(timeoutId2);
-	// 	};
-
-	// 	const handleExperienceMouseLeave = () => {
-	// 		timeoutId2 = setTimeout(() => {
-	// 			submenu.style.display = "none";
-	// 		}, 2000);
-	// 	};
-
-	// 	const handleSubmenuMouseEnter = () => {
-	// 		clearTimeout(timeoutId2);
-	// 	};
-
-	// 	const handleSubmenuMouseLeave = () => {
-	// 		submenu.style.display = "none";
-	// 	};
-
-	// 	experience.addEventListener("mouseenter", handleExperienceMouseEnter);
-	// 	experience.addEventListener("mouseleave", handleExperienceMouseLeave);
-	// 	submenu.addEventListener("mouseenter", handleSubmenuMouseEnter);
-	// 	submenu.addEventListener("mouseleave", handleSubmenuMouseLeave);
-
-	// 	// Cleanup function to remove event listeners when the component is unmounted
-	// 	return () => {
-	// 		experience.removeEventListener("mouseenter", handleExperienceMouseEnter);
-	// 		experience.removeEventListener("mouseleave", handleExperienceMouseLeave);
-	// 		submenu.removeEventListener("mouseenter", handleSubmenuMouseEnter);
-	// 		submenu.removeEventListener("mouseleave", handleSubmenuMouseLeave);
-	// 	};
-	// }, []);
-
 	useEffect(() => {
 		const agenda = document.querySelector(".agenda");
 		const agendaSubmenu = document.querySelector(".agendaSubmenu");
@@ -197,9 +142,9 @@ const Navbar = () => {
 					<div className="menu_dv">
 						<div className="header-left">
 							<a href="https://www.asia.token2049.com">
-								<img src="/Token-logo.png" alt="Token2049" class="nav-mobile-img" />
-								{/*<img src="./token2049-sg.svg" width="150px" class="nav-img" />*/}
-								<img src="./TOKENWEEK-DUBAI-LOGO.svg" width="130px" class="nav-img" />
+								<img src="/Token-logo.png" alt="Token2049" className="nav-mobile-img" />
+								{/*<img src="./token2049-sg.svg" width="150px" className="nav-img" />*/}
+								<img src="./TOKENWEEK-DUBAI-LOGO.svg" width="130px" className="nav-img" />
 							</a>
 						</div>
 
@@ -226,33 +171,11 @@ const Navbar = () => {
 
 						<div className={"header-right navbar-collapse lgCustom:block hidden " + (collapsed ? "collapse" : "")} id="navbarSupportedContent">
 							<ul className="navbar-nav">
-								{/* <li className="nav-item onlymb">
-									<a href="https://www.asia.token2049.com/tickets" className="nav-link">
-										TICKETS
-									</a>
-								</li> */}
 								<li className="nav-item">
 									<a href="https://www.dubai.token2049.com/speakers" className="nav-link md:-ml-10 hover:text-[#DB90FF]">
 										SPEAKERS
 									</a>
 								</li>
-								{/* <li className="nav-item"><a href="https://www.asia.token2049.com/agenda" className="nav-link">SIDE EVENTS</a></li> */}
-								{/* <!-- <li className="nav-item age-nda dropdown">
-                   <div className="agenda_new"> <span className="formbh" onclick="myfunction()" id="formbh"></span>
-                <a href="https://www.asia.token2049.com/agenda" className="nav-link">AGENDA</a></div>
-                  <div className="dropdown-content hide" id="dropdown-content">
-                    <a href="https://www.asia.token2049.com/agenda">OKX MAINSTAGE</a>
-                    <a href="https://www.asia.token2049.com/stage-2">STAGE 2</a>
-                    <a href="https://www.asia.token2049.com/kucoin-stage">KUCOIN STAGE</a>
-                  </div>
-              </li> --> */}
-			  					{/* 
-								<li className="nav-item agenda">
-									<a href="#" className="nav-link md:-ml-10">
-										AGENDA
-									</a>
-								</li>
-								*/}
 								<li className="nav-item">
 									<a href="https://www.dubai.token2049.com/travel" className="nav-link md:-ml-10">
 										TRAVEL
@@ -274,25 +197,6 @@ const Navbar = () => {
 										2024 REPORT
 									</a>
 								</li>
-								
-								{/*
-								<li className="nav-item experience">
-									<a href="#" className="nav-link">
-										EXPERIENCE
-									</a>
-								</li>
-								*/}
-
-								{/* <li className="nav-item experience">
-									<a href="#" className="nav-link md:ml-4">
-										EXPERIENCE
-									</a>
-								</li> */}
-								{/* <li className="nav-item md:-ml-[10px]">
-									<a href="/" className="nav-link side-event-active-link">
-										SIDE EVENTS
-									</a>
-								</li> */}
 
 								<div className="nav-item exhibt heder_btn">
 									<a href="https://www.dubai.token2049.com/partners" className="btn nav-link">
@@ -309,58 +213,43 @@ const Navbar = () => {
 
 						{!collapsed ? (
 							<div id="hamburger-overlay" className="lgCustom:hidden block">
-								<div class="navbar-navs">
-									<span class="nav-item">
-										<a href="https://www.dubai.token2049.com/tickets" class="nav-link-ham">
+								<div className="navbar-navs">
+									<span className="nav-item">
+										<a href="https://www.dubai.token2049.com/tickets" className="nav-link-ham">
 											TICKETS
 										</a>
 									</span>
 
-									<span class="nav-item">
-										<a href="https://www.dubai.token2049.com/speakers" class="nav-link-ham">
+									<span className="nav-item">
+										<a href="https://www.dubai.token2049.com/speakers" className="nav-link-ham">
 											SPEAKERS
 										</a>
 									</span>
 
-									<span class="nav-item">
-										<a href="https://www.dubai.token2049.com/partners" class="nav-link-ham">
+									<span className="nav-item">
+										<a href="https://www.dubai.token2049.com/partners" className="nav-link-ham">
 											PARTNERS
 										</a>
 									</span>
 
-									<span class="nav-item">
-										<a href="https://www.dubai.token2049.com/travel" class="nav-link-ham">
+									<span className="nav-item">
+										<a href="https://www.dubai.token2049.com/travel" className="nav-link-ham">
 											TRAVEL
 										</a>
 									</span>
 
 
-									<span class="nav-item">
-										<a href="https://www.dubai.token2049.com/students" class="nav-link-ham">
+									<span className="nav-item">
+										<a href="https://www.dubai.token2049.com/students" className="nav-link-ham">
 											STUDENTS
 										</a>
 									</span>
 
-									<span class="nav-item">
-										<a href="https://www.dubai.token2049.com/2024-report" class="nav-link-ham">
+									<span className="nav-item">
+										<a href="https://www.dubai.token2049.com/2024-report" className="nav-link-ham">
 											2024 REPORT
 										</a>
 									</span>
-
-									{/*}
-
-									<span class="nav-item">
-										<a href="https://attending.token2049.com" class="nav-link-ham">
-											I&apos;M ATTENDING
-										</a>
-									</span>
-									*/}
-
-									{/* <span class="nav-item">
-										<a href="https://pfp.token2049.com" class="nav-link-ham">
-											I&apos;M ATTENDING
-										</a>
-									</span> */}
 								</div>
 							</div>
 						) : null}
@@ -379,42 +268,35 @@ const Navbar = () => {
 
 			<div className="p-1 bg-transparent">
 				<div className="agendaSubmenu">
-					<a href="https://www.asia.token2049.com/agenda" class="agendaSubmenu-link">
+					<a href="https://www.asia.token2049.com/agenda" className="agendaSubmenu-link">
 						OKX MAIN STAGE
 					</a>
-					<a href="https://www.asia.token2049.com/sky-stage" class="agendaSubmenu-link">
+					<a href="https://www.asia.token2049.com/sky-stage" className="agendaSubmenu-link">
 						SKY STAGE
 					</a>
-					<a href="https://www.asia.token2049.com/zeebu-stage" class="agendaSubmenu-link">
+					<a href="https://www.asia.token2049.com/zeebu-stage" className="agendaSubmenu-link">
 						ZEEBU STAGE
 					</a>
-					<a href="https://www.asia.token2049.com/dwf-labs-stage" class="agendaSubmenu-link">
+					<a href="https://www.asia.token2049.com/dwf-labs-stage" className="agendaSubmenu-link">
 						DWF LABS STAGE
 					</a>
 				</div>
 			</div>
 
 			<div className="p-1 bg-transparent">
-				<div class="submenu">
-					<a href="https://www.asia.token2049.com/travel" class="submenu-link">
+				<div className="submenu">
+					<a href="https://www.asia.token2049.com/travel" className="submenu-link">
 						TRAVEL
 					</a>
-					<a href="https://www.asia.token2049.com/mobile-app" class="submenu-link">
+					<a href="https://www.asia.token2049.com/mobile-app" className="submenu-link">
 						MOBILE APP
 					</a>
-					<a href="https://week.token2049.com" class="submenu-link">
+					<a href="https://week.token2049.com" className="submenu-link">
 						TOKEN2049 WEEK
 					</a>
-					{/* <a href="https://www.asia.token2049.com/students" class="submenu-link">
-						STUDENTS
-					</a> */}
-					<a href="https://attending.token2049.com" class="submenu-link">
+					<a href="https://attending.token2049.com" className="submenu-link">
 						I&apos;M ATTENDING
 					</a>
-
-					{/* <a href="https://pfp.token2049.com" class="submenu-link pfps">
-						I&apos;M ATTENDING
-					</a> */}
 				</div>
 			</div>
 		</header>

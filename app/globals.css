@@ -1770,9 +1770,9 @@ footer.bg .container-lg {
 		padding: 12px 15px 12px 15px;
 		min-width: 130px;
 	}
-	div.subs_section {
-		/* max-width: 1200px !important; */
-	}
+	/* div.subs_section {
+		max-width: 1200px !important;
+	} */
 }
 
 @media (min-width: 1200px) {
@@ -5051,6 +5051,7 @@ button.tooltip-button:active {
 #hamburger-background {
 	position: fixed;
 	top: 0;
+	left: 0;
 	min-height: 100vh !important;
 	height: 100vh !important;
 	min-width: 100vw !important;
