@@ -43,7 +43,7 @@ const HeroSection = () => {
 							</div>
 
 							<p>
-								<span className="font-light">Want to host a side event and haven&apos;t found a space yet?&nbsp;</span>
+								<span style={{fontFamily: "OpenSauceSansLight"}}>Want to host a side event and haven&apos;t found a space yet?&nbsp;</span>
 								<>
 									<a href="https://tally.so/r/w4Lp9B" target="_blank" className="host-link">
 										Click here to get in touch
