@@ -129,7 +129,7 @@ const Footer = () => {
 						</ul>
 					</div>
 					<div className="copyright">
-						<p>&copy; 2024 TOKEN2049. All rights reserved.</p>
+						<p>&copy; 2025 TOKEN2049. All rights reserved.</p>
 					</div>
 				</div>
 			</div>
