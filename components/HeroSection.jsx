@@ -52,9 +52,9 @@ const HeroSection = () => {
 								</>
 							</p>
 
-							<div className="flex justify-center items-center pt-16 chevron-desktop">
+							{/* <div className="flex justify-center items-center pt-16 chevron-desktop">
 								<img src={"/chevron.svg"} className="" height="30" width="30" />
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>
