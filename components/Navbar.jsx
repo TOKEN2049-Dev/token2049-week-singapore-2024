@@ -6,19 +6,22 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
 	const router = useRouter();
 	const pathname = usePathname();
-	const [collapsed, setCollapsed] = useState(pathname === "/admin");
+	const [collapsed, setCollapsed] = useState(true);
 
 	useEffect(() => {
-		setCollapsed(window.innerWidth < 1026 || pathname === "/admin");
-		window?.addEventListener("resize", (e) => {
+		const handleResize = () => {
 			if (pathname === "/admin") {
 				setCollapsed(true);
 				return;
 			}
-			const windowWidth = window?.innerWidth;
-			if (windowWidth < 1026) setCollapsed(true);
-			else setCollapsed(false);
-		});
+			setCollapsed(window.innerWidth < 1026);
+		};
+
+		handleResize();
+
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
 	}, [pathname]);
 
 	const handleLogout = async () => {
@@ -209,7 +212,7 @@ const Navbar = () => {
 							</ul>
 						</div>
 
-						{!collapsed && <div id="hamburger-background" className="lgCustom:hidden block"></div>}
+						<div id="hamburger-background" className={`lgCustom:hidden ${collapsed ? 'hidden' : 'block'}`}></div>
 
 						{!collapsed ? (
 							<div id="hamburger-overlay" className="lgCustom:hidden block">

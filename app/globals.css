@@ -2608,7 +2608,7 @@ header.header .main .navbar-toggler {
 		background: transparent;
 		min-height: auto;
 		padding-bottom: 35px;
-		margin-top: 50px;
+		margin-top: 0px;
 	}
 	div.filter-btb div#all-buttons button:first-child {
 		margin-left: auto !important;
@@ -4266,7 +4266,7 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 		max-height: 100vh;
 		display: flex;
 		width: 100%;
-		background-image: url("/mobile_bg.png") !important;
+		background-image: url("/TOKENWEEK-MOBILE-BG.png") !important;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
