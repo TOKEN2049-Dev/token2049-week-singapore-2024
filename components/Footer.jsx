@@ -18,17 +18,17 @@ const Footer = () => {
 							<div className="col-sm-5 col-md-5 col-3 footer-lft foot-cnt-left footer_ul_inner">
 								<ul>
 									<li>
-										<a href="https://www.asia.token2049.com/speakers" target="blank">
+										<a href="https://www.dubai.token2049.com/speakers" target="blank">
 											Speakers
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com/partners" target="blank">
+										<a href="https://www.dubai.token2049.com/partners" target="blank">
 											Sponsors
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com/partners" target="blank">
+										<a href="https://www.dubai.token2049.com/partners#media" target="blank">
 											Media
 										</a>
 									</li>
