@@ -44,12 +44,12 @@ const HeroSection = () => {
 
 							<p>
 								<span>Want to host a side event and haven&apos;t found a space yet?&nbsp;</span>
-								<div>
+								<>
 									<a href="https://tally.so/r/w4Lp9B" target="_blank" className="host-link">
 										Click here to get in touch
 									</a>
 									.
-								</div>
+								</>
 							</p>
 
 							<div className="flex justify-center items-center pt-16 chevron-desktop">
