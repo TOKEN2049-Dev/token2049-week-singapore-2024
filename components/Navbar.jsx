@@ -196,7 +196,7 @@ const Navbar = () => {
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="https://www.dubai.token2049.com/2024-report" className="nav-link md:-ml-10">
+									<a href="https://www.dubai.token2049.com/2024-report" className="nav-link md:-ml-10 whitespace-nowrap">
 										2024 REPORT
 									</a>
 								</li>
