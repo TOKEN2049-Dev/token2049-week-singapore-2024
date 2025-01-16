@@ -45,7 +45,7 @@ const HeroSection = () => {
 							<p>
 								<span style={{fontFamily: "OpenSauceSansLight"}}>Want to host a side event and haven&apos;t found a space yet?&nbsp;</span>
 								<>
-									<a href="https://tally.so/r/w4Lp9B" target="_blank" className="host-link">
+									<a href="https://forms.token2049.com/dubai/host-an-event" target="_blank" className="host-link">
 										Click here to get in touch
 									</a>
 									.
