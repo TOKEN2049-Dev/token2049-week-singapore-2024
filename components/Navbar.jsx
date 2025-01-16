@@ -144,7 +144,7 @@ const Navbar = () => {
 				<div className="container-lg">
 					<div className="menu_dv">
 						<div className="header-left">
-							<a href="https://www.asia.token2049.com">
+							<a href="https://www.dubai.token2049.com">
 								<img src="/Token-logo.png" alt="Token2049" className="nav-mobile-img" />
 								{/*<img src="./token2049-sg.svg" width="150px" className="nav-img" />*/}
 								<img src="./TOKENWEEK-DUBAI-LOGO.svg" width="130px" className="nav-img" />
