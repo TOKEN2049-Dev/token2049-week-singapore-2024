@@ -56,17 +56,22 @@ const Footer = () => {
 										</a>
 									</li>
 									<li>
+										<a href="http://www.dubai.token2049.com" target="blank">
+											TOKEN2049 Dubai
+										</a>
+									</li>
+									<li>
 										<a href="http://www.week.token2049.com" target="blank">
 											TOKEN2049 Week
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com/terms-conditions" target="_blank">
+										<a href="https://www.dubai.token2049.com/terms-conditions" target="_blank">
 											Terms & Conditions
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com/privacy-policy" target="_blank">
+										<a href="https://www.dubai.token2049.com/privacy-policy" target="_blank">
 											Privacy Policy
 										</a>
 									</li>
