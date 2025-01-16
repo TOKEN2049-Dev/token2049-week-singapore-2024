@@ -3,7 +3,7 @@ const NewsLetter = () => {
 		<div id="newsletter" className="alldata subs_section">
 			<div className="subs row" style={{ background: "#FAFAFA", minHeight: "none !important" }}>
 				<div className="w-full md:p-0 px-[20px] relative flex-col flex  md:items-center md:justify-center h-full bg-[#FAFAFA]">
-					<p className="leading-tight subscribe-head text-3xl md:text-4xl text-center lg:text-[35px] md:mr-10 md:px-0 sm:px-16 px-6">
+					<p className="leading-tight subscribe-head text-3xl md:text-4xl text-center lg:text-[35px] md:mr-10 md:px-0 sm:px-16 px-6 mb-6">
 						Subscribe for the latest event updates
 					</p>
 					<form action="https://token2049.us17.list-manage.com/subscribe/post" method="POST">

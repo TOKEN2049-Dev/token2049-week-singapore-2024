@@ -7,7 +7,7 @@ const Footer = () => {
 				<div className="row footer_inner_bg">
 					<div className="col-sm-5 col-md-5 col-12 footerimg foot-left-section">
 						<div className="foot-logo">
-							<a href="https://www.asia.token2049.com">
+							<a href="https://www.dubai.token2049.com">
 								<img src="/TOKEN_Transparent.webp" />
 							</a>
 						</div>
@@ -134,6 +134,7 @@ const Footer = () => {
 						</ul>
 					</div>
 					<div className="copyright">
+						<img src="/dubai-logo.svg" width="100px" className="w-[90px] h-auto mb-2"/>
 						<p>&copy; 2025 TOKEN2049. All rights reserved.</p>
 					</div>
 				</div>
