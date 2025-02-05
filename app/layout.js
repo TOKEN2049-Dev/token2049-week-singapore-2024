@@ -4,7 +4,7 @@ import GoogleAnalytics from "./GoogleAnalytics";
 import Script from "next/script";
 
 export const metadata = {
-	title: "TOKEN2049 Week | 28 April - 3 May 2025 | Dubai",
+	title: "TOKEN2049 Week | 28 April - 4 May 2025 | Dubai",
 	description:
 		"TOKEN2049 Week is the year's widest range of meetups, workshops, networking drinks and parties with TOKEN2049 being the flagship event of the week – creating unparalleled networking opportunities.",
 };
