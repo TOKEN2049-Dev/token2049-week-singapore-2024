@@ -180,24 +180,24 @@ const Navbar = () => {
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="https://www.dubai.token2049.com/travel" className="nav-link md:-ml-10">
-										TRAVEL
-									</a>
-								</li>
-								<li className="nav-item">
 									<a href="https://www.dubai.token2049.com/partners" className="nav-link md:-ml-10">
 										PARTNERS
 									</a>
 								</li>
-
-								<li className="nav-item md:min-width-[110px]">
-									<a href="https://www.dubai.token2049.com/students" className="nav-link md:-ml-10">
-										STUDENTS
+								<li className="nav-item">
+									<a href="https://www.dubai.token2049.com/travel" className="nav-link md:-ml-10">
+										TRAVEL
 									</a>
 								</li>
+								
 								<li className="nav-item">
 									<a href="https://www.dubai.token2049.com/2024-report" className="nav-link md:-ml-10 whitespace-nowrap">
 										2024 REPORT
+									</a>
+								</li>
+								<li className="nav-item md:min-width-[110px]">
+									<a href="https://www.week.token2049.com" className="nav-link md:-ml-10 whitespace-nowrap">
+										TOKEN2049 WEEK
 									</a>
 								</li>
 
