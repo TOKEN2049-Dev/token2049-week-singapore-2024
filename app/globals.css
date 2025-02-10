@@ -1220,7 +1220,7 @@ header.header .main .navbar-toggler.collapsed .navbar-toggler-icon .fa.fa-close 
 	align-items: center;
 	float: right;
 	padding: 2px 0px 0px 0px;
-	margin-left: 20px;
+	margin-left: 0px;
 }
 header.header .main .navbar-toggler {
 	display: none;
