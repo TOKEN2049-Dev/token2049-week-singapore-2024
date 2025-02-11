@@ -197,7 +197,7 @@ const Navbar = () => {
 								</li>
 								<li className="nav-item md:min-width-[110px]">
 									<a href="https://www.week.token2049.com" className="nav-link md:-ml-10 whitespace-nowrap">
-										TOKEN2049 WEEK
+										SIDE EVENTS
 									</a>
 								</li>
 
