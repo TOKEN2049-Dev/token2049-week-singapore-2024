@@ -127,7 +127,7 @@ const EventFilters = ({ selectedDateFilter, initialEvents }) => {
 					</div>
 				</div>
 			</div>
-			<div className={"e-divs all_div-parent mt-5"} id="events-div">
+			<div className="e-divs all_div-parent mt-5 lgCustom:m-5" id="events-div">
 				{constructedEventCardArr && constructedEventCardArr.length > 0 ? (
 					constructedEventCardArr
 				) : (

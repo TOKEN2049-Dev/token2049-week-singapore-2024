@@ -35,7 +35,7 @@ export default async function HomePage() {
 			<Navbar />
 			<HeroSection />
 			<div className="t-events">
-				{/* 
+				
 				<div className="container c-hack">
 					
 					<Suspense fallback={<div>Loading...</div>}>
@@ -43,7 +43,7 @@ export default async function HomePage() {
 					</Suspense>
 					
 				</div>
-				*/}
+				
 				<NewsLetter />
 				<Footer />
 			</div>
