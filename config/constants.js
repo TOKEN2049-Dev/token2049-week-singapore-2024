@@ -1,5 +1,5 @@
-export const current_date = "2024-09-16";
-export const last_date = "2024-09-22";
+export const current_date = "2025-04-28";
+export const last_date = "2025-05-04";
 export const website_url = "https://week.token2049.com";
 
 const formToDBMap = new Map();
