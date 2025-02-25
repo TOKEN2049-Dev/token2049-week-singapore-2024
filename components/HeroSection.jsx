@@ -43,18 +43,18 @@ const HeroSection = () => {
 							</div>
 
 							<p>
-								<span>Want to host a side event and haven&apos;t found a space yet?&nbsp;</span>
-								<div>
-									<a href="https://tally.so/r/w4Lp9B" target="_blank" className="host-link">
+								<span style={{fontFamily: "OpenSauceSansLight"}}>Want to host a side event and haven&apos;t found a space yet?&nbsp;</span>
+								<>
+									<a href="https://forms.token2049.com/dubai/hosting" target="_blank" className="host-link">
 										Click here to get in touch
 									</a>
 									.
-								</div>
+								</>
 							</p>
 
-							<div className="flex justify-center items-center pt-16 chevron-desktop">
+							{/* <div className="flex justify-center items-center pt-16 chevron-desktop">
 								<img src={"/chevron.svg"} className="" height="30" width="30" />
-							</div>
+							</div> */}
 						</div>
 					</div>
 				</div>

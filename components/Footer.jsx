@@ -7,7 +7,7 @@ const Footer = () => {
 				<div className="row footer_inner_bg">
 					<div className="col-sm-5 col-md-5 col-12 footerimg foot-left-section">
 						<div className="foot-logo">
-							<a href="https://www.asia.token2049.com">
+							<a href="https://www.dubai.token2049.com">
 								<img src="/TOKEN_Transparent.webp" />
 							</a>
 						</div>
@@ -18,17 +18,17 @@ const Footer = () => {
 							<div className="col-sm-5 col-md-5 col-3 footer-lft foot-cnt-left footer_ul_inner">
 								<ul>
 									<li>
-										<a href="https://www.asia.token2049.com/speakers" target="blank">
+										<a href="https://www.dubai.token2049.com/speakers" target="blank">
 											Speakers
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com/partners" target="blank">
+										<a href="https://www.dubai.token2049.com/partners" target="blank">
 											Sponsors
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com/partners" target="blank">
+										<a href="https://www.dubai.token2049.com/partners#media" target="blank">
 											Media
 										</a>
 									</li>
@@ -56,17 +56,22 @@ const Footer = () => {
 										</a>
 									</li>
 									<li>
+										<a href="http://www.dubai.token2049.com" target="blank">
+											TOKEN2049 Dubai
+										</a>
+									</li>
+									<li>
 										<a href="http://www.week.token2049.com" target="blank">
 											TOKEN2049 Week
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com/terms-conditions" target="_blank">
+										<a href="https://www.dubai.token2049.com/terms-conditions" target="_blank">
 											Terms & Conditions
 										</a>
 									</li>
 									<li>
-										<a href="https://www.asia.token2049.com/privacy-policy" target="_blank">
+										<a href="https://www.dubai.token2049.com/privacy-policy" target="_blank">
 											Privacy Policy
 										</a>
 									</li>
@@ -129,7 +134,8 @@ const Footer = () => {
 						</ul>
 					</div>
 					<div className="copyright">
-						<p>&copy; 2024 TOKEN2049. All rights reserved.</p>
+						<img src="/dubai-logo.svg" width="100px" className="w-[90px] h-auto mb-2"/>
+						<p>&copy; 2025 TOKEN2049. All rights reserved.</p>
 					</div>
 				</div>
 			</div>

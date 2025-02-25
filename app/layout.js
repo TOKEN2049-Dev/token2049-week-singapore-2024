@@ -4,7 +4,7 @@ import GoogleAnalytics from "./GoogleAnalytics";
 import Script from "next/script";
 
 export const metadata = {
-	title: "TOKEN2049 Week | 16-22 September 2024 | Singapore",
+	title: "TOKEN2049 Week | 28 April - 4 May 2025 | Dubai",
 	description:
 		"TOKEN2049 Week is the year's widest range of meetups, workshops, networking drinks and parties with TOKEN2049 being the flagship event of the week – creating unparalleled networking opportunities.",
 };
@@ -16,10 +16,11 @@ export default function RootLayout({ children }) {
 				<link rel="shortcut icon" href="./favicon.ico" />
 				<meta content="yes" name="apple-mobile-web-app-capable" />
 				<meta content="black-translucent" name="apple-mobile-web-app-status-bar-style" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<meta name="author" content={metadata.description} />
 				<meta property="og:title" content={metadata.title} />
 				<meta property="og:type" content="website" />
-				<meta property="og:image" content="https://raw.githubusercontent.com/DarwinBlock/token2049-week-singapore-2024/main/public/og.png" />
+				<meta property="og:image" content="https://raw.githubusercontent.com/stanleyftf1005/token2049-week-singapore-2024/refs/heads/main/public/TOKENWEEK%20DXB%20-%20OpenGraph%20(1)%20(1).png" />
 				<meta property="og:url" content="https://week.token2049.com" />
 				<meta property="og:site_name" content={metadata.title} />
 				<meta property="og:description" content={metadata.description} />
@@ -29,7 +30,7 @@ export default function RootLayout({ children }) {
 				<meta name="twitter:url" content="https://week.token2049.com" />
 				<meta name="twitter:title" content={metadata.title} />
 				<meta name="twitter:description" content={metadata.title} />
-				<meta name="twitter:image" content="https://raw.githubusercontent.com/DarwinBlock/token2049-week-singapore-2024/main/public/og.png" />
+				<meta name="twitter:image" content="https://raw.githubusercontent.com/stanleyftf1005/token2049-week-singapore-2024/refs/heads/main/public/TOKENWEEK%20DXB%20-%20OpenGraph%20(1)%20(1).png" />
 				<meta name="twitter:tags" content="token2049" />
 
 				<link

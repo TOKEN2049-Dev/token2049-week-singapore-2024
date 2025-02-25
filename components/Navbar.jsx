@@ -6,19 +6,22 @@ import { useEffect, useState } from "react";
 const Navbar = () => {
 	const router = useRouter();
 	const pathname = usePathname();
-	const [collapsed, setCollapsed] = useState(pathname === "/admin");
+	const [collapsed, setCollapsed] = useState(true);
 
 	useEffect(() => {
-		setCollapsed(window.innerWidth < 1026 || pathname === "/admin");
-		window?.addEventListener("resize", (e) => {
+		const handleResize = () => {
 			if (pathname === "/admin") {
 				setCollapsed(true);
 				return;
 			}
-			const windowWidth = window?.innerWidth;
-			if (windowWidth < 1026) setCollapsed(true);
-			else setCollapsed(false);
-		});
+			setCollapsed(window.innerWidth < 1026);
+		};
+
+		handleResize();
+
+		window.addEventListener("resize", handleResize);
+
+		return () => window.removeEventListener("resize", handleResize);
 	}, [pathname]);
 
 	const handleLogout = async () => {
@@ -141,7 +144,7 @@ const Navbar = () => {
 				<div className="container-lg">
 					<div className="menu_dv">
 						<div className="header-left">
-							<a href="https://www.asia.token2049.com">
+							<a href="https://www.dubai.token2049.com">
 								<img src="/Token-logo.png" alt="Token2049" className="nav-mobile-img" />
 								{/*<img src="./token2049-sg.svg" width="150px" className="nav-img" />*/}
 								<img src="./TOKENWEEK-DUBAI-LOGO.svg" width="130px" className="nav-img" />
@@ -177,24 +180,24 @@ const Navbar = () => {
 									</a>
 								</li>
 								<li className="nav-item">
-									<a href="https://www.dubai.token2049.com/travel" className="nav-link md:-ml-10">
-										TRAVEL
-									</a>
-								</li>
-								<li className="nav-item">
 									<a href="https://www.dubai.token2049.com/partners" className="nav-link md:-ml-10">
 										PARTNERS
 									</a>
 								</li>
-
-								<li className="nav-item md:min-width-[110px]">
-									<a href="https://www.dubai.token2049.com/students" className="nav-link md:-ml-10">
-										STUDENTS
+								<li className="nav-item">
+									<a href="https://www.dubai.token2049.com/travel" className="nav-link md:-ml-10">
+										TRAVEL
 									</a>
 								</li>
+								
 								<li className="nav-item">
-									<a href="https://www.dubai.token2049.com/2024-report" className="nav-link md:-ml-10">
+									<a href="https://www.dubai.token2049.com/2024-report" className="nav-link md:-ml-10 whitespace-nowrap">
 										2024 REPORT
+									</a>
+								</li>
+								<li className="nav-item md:min-width-[110px]">
+									<a href="https://www.week.token2049.com" className="nav-link md:-ml-10 whitespace-nowrap">
+										SIDE EVENTS
 									</a>
 								</li>
 
@@ -209,7 +212,7 @@ const Navbar = () => {
 							</ul>
 						</div>
 
-						{!collapsed && <div id="hamburger-background" className="lgCustom:hidden block"></div>}
+						<div id="hamburger-background" className={`lgCustom:hidden ${collapsed ? 'hidden' : 'block'}`}></div>
 
 						{!collapsed ? (
 							<div id="hamburger-overlay" className="lgCustom:hidden block">

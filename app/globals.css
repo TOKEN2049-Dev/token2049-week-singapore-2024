@@ -547,16 +547,18 @@ header.header ul li a {
 	padding: 2px 0px 0px 0px;
 }
 header.header ul {
-	display: flex;
+	display: flex !important;
 	padding: 2px 0px 0px /*70*/ 10px;
-	justify-content: flex-start;
+	/*justify-content: flex-start;*/
+	justify-content: space-between;
+	gap: 40px;
 	float: left;
 	width: 100%;
 	margin: 0;
 	align-items: center;
-	flex-direction: unset; /* gap: 56px;*/
+	flex-direction: row; /* gap: 56px;*/
 	display: grid;
-	grid-template-columns: 14.8% 13% 14.8% 11.9% 15.7% 30%;
+	/*grid-template-columns: 14.8% 13% 14.8% 11.9% 15.7% 30%;*/
 }
 
 @-moz-document url-prefix() {
@@ -620,7 +622,7 @@ header.header.navbar-expand-lg ul li a.bttn:hover {
 	color: #fff;
 }
 header.header ul li a:hover {
-	color: #3f129e;
+	color: #DB90FF;
 }
 .t-events {
 	width: 100%;
@@ -1065,7 +1067,7 @@ body div.webui-popover .arrow {
 	display: flex;
 	width: 100%;
 	/*background-image: url("/TOKEN2049-Week-Header.png");*/
-	background-image: url("/TOKENWEEK-DUBAI-HEADER.png");
+	background-image: url("/tokenweek-dubai-hero-bg.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -1218,7 +1220,7 @@ header.header .main .navbar-toggler.collapsed .navbar-toggler-icon .fa.fa-close 
 	align-items: center;
 	float: right;
 	padding: 2px 0px 0px 0px;
-	margin-left: 20px;
+	margin-left: 0px;
 }
 header.header .main .navbar-toggler {
 	display: none;
@@ -2608,7 +2610,7 @@ header.header .main .navbar-toggler {
 		background: transparent;
 		min-height: auto;
 		padding-bottom: 35px;
-		margin-top: 50px;
+		margin-top: 0px;
 	}
 	div.filter-btb div#all-buttons button:first-child {
 		margin-left: auto !important;
@@ -4266,7 +4268,7 @@ header .container-lg , footer .container-lg ,.t-events .container{max-width: 720
 		max-height: 100vh;
 		display: flex;
 		width: 100%;
-		background-image: url("/mobile_bg.png") !important;
+		background-image: url("/TOKENWEEK-MOBILE-BG.png") !important;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center;
