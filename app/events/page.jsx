@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 }
 
 // Set the revalidation period (in seconds)
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 60; // Revalidate every hour
 
 export default async function HomePage() {
 	const events = await fetchEvents();
