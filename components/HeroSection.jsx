@@ -31,15 +31,15 @@ const HeroSection = () => {
 									<button className="min-w-[279px] side-evnt cursor-pointer">SUBMIT YOUR EVENT</button>
 								</a>
 								
-								{/* <a
+								<a
 									className="w-full cursor-pointer"
-									href="https://docs.google.com/spreadsheets/d/1bWp6ENyhxaNnnCHvxrMRO8n1IRKq3lu891F7Y4zxfZk/edit?gid=0#gid=0"
+									href="https://docs.google.com/spreadsheets/d/1dz5m9JrPePk0fBl_HD6O8edwYaw-APBOGmcAF38gTUM/edit?gid=0#gid=0"
 									target="__blank"
 								>
 									<button id="side-events-btn" className="min-w-[279px] hst-own cursor-pointer side-events-btn">
 										SIDE EVENTS SHEET
 									</button>
-								</a> */}
+								</a>
 							</div>
 
 							<p>
